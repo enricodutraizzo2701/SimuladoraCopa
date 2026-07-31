@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissão ao Vivo</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; min-height: 100vh; box-sizing: border-box; }
+        
+        .placar-box { background: rgba(0, 0, 0, 0.7); border: 2px solid rgba(0, 229, 255, 0.4); border-radius: 15px; padding: 15px 20px; width: 100%; max-width: 500px; box-shadow: 0 0 25px rgba(0, 229, 255, 0.15); margin-bottom: 10px; box-sizing: border-box; }
+        .cabecalho-placar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 15px; }
+        .ao-vivo { color: #ff007f; font-weight: bold; font-size: 14px; text-transform: uppercase; animation: piscar 1.5s infinite; }
+        .cronometro { color: #00e5ff; font-weight: bold; font-size: 18px; font-family: monospace; }
+        @keyframes piscar { 50% { opacity: 0; } }
+
+        .times-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .time-nome { flex: 1; text-align: center; font-size: 16px; font-weight: bold; text-transform: uppercase; }
+        .placar-numeros { font-size: 45px; font-weight: bold; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.5); margin: 0 10px; min-width: 80px; text-align: center; display:flex; flex-direction:column;}
+        
+        .placar-penaltis { font-size: 20px; color: #FFD700; margin-top: 5px; display: none; }
+
+        #btn-pular { background: rgba(255, 0, 127, 0.1); border: 1px solid #ff007f; color: #ff007f; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 15px; text-transform: uppercase; font-size: 12px; transition: 0.2s; width: 100%; max-width: 500px; display: flex; justify-content: center; align-items: center; gap: 8px;}
+        #btn-pular:hover { background: rgba(255, 0, 127, 0.3); }
+
+        .narracao-container { background: rgba(255,255,255,0.04); border-left: 4px solid #ff007f; border-radius: 0 10px 10px 0; padding: 15px 20px; width: 100%; max-width: 500px; min-height: 85px; display: flex; align-items: center; margin-bottom: 20px; box-sizing: border-box; transition: all 0.3s ease; }
+        .texto-narracao { font-size: 16px; color: #eee; line-height: 1.4; width: 100%; }
+        .texto-narracao span.minuto { color: #ff007f; font-weight: bold; margin-right: 8px; font-family: monospace; }
+        .gol-destaque { color: #FFD700; font-weight: bold; font-size: 18px; text-shadow: 0 0 10px rgba(255,215,0,0.4); }
+        .cartao-destaque { color: #ff3333; font-weight: bold; }
+
+        .area-fim { display: none; width: 100%; max-width: 500px; animation: subir 0.5s ease; }
+        @keyframes subir { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .sessao-box { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: 12px; padding: 15px 20px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .sessao-box h3 { color: #00e5ff; margin-top: 0; margin-bottom: 12px; text-align: center; text-transform: uppercase; font-size: 16px; letter-spacing: 1px; }
+
+        .area-penaltis { display: none; width: 100%; max-width: 500px; background: rgba(0, 0, 0, 0.8); border: 2px solid #FFD700; border-radius: 12px; padding: 20px; box-sizing: border-box; text-align: center; margin-bottom: 20px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); animation: fade 1s ease; }
+        @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+        
+        .titulo-penaltis { font-size: 24px; color: #FFD700; text-transform: uppercase; margin-bottom: 20px; font-weight: bold; letter-spacing: 2px; }
+        .cobranca-texto { font-size: 18px; margin-bottom: 20px; min-height: 50px; display: flex; align-items: center; justify-content: center;}
+        
+        .bolinhas-container { display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .bolinhas-time { display: flex; gap: 5px; }
+        .bolinha { width: 15px; height: 15px; border-radius: 50%; background: #444; border: 2px solid #222; }
+        .bolinha.gol { background: #00ff80; border-color: #00cc66; box-shadow: 0 0 10px #00ff80; }
+        .bolinha.fora { background: #ff3333; border-color: #cc0000; box-shadow: 0 0 10px #ff3333; }
+
+        .item-resumo { font-size: 14px; color: #ccc; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; gap: 10px; }
+        .item-resumo:last-child { border-bottom: none; }
+        .minuto-tag { color: #ff007f; font-weight: bold; font-family: monospace; min-width: 35px; }
+
+        .linha-estatistica { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .linha-estatistica:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .stat-valor { font-weight: bold; font-size: 15px; color: #fff; width: 85px; text-align: center; }
+        .stat-valor.casa { color: #00e5ff; }
+        .stat-valor.fora { color: #ff007f; }
+        .stat-label { flex: 1; text-align: center; font-size: 13px; color: #ccc; text-transform: uppercase; letter-spacing: 0.5px; }
+        .barra-posse { width: 100%; height: 6px; background: #ff007f; border-radius: 3px; margin-top: 5px; overflow: hidden; display: flex; }
+        .barra-posse-casa { height: 100%; background: #00e5ff; }
+
+        .btn-voltar { display: block; text-align: center; background: #ff007f; color: #fff; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; box-sizing: border-box; box-shadow: 0 0 15px #ff007f; transition: 0.2s; text-transform: uppercase; letter-spacing: 1px; margin-top: 15px;}
+        .btn-voltar:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+
+    <div class="placar-box">
+        <div class="cabecalho-placar">
+            <span class="ao-vivo" id="status-jogo">🔴 AO VIVO</span>
+            <span class="cronometro" id="relogio">00'</span>
+        </div>
+        <div class="times-container">
+            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                <img src="/static/logos/{{ dados.time_casa }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" alt="Escudo Casa" style="width: 50px; height: 50px; border-radius: 50%; object-fit: contain; background: rgba(255,255,255,0.1); padding: 4px; margin-bottom: 8px; filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));">
+                <div class="time-nome">{{ dados.time_casa }}</div>
+            </div>
+            
+            <div class="placar-numeros">
+                <div><span id="gol-casa">0</span> - <span id="gol-fora">0</span></div>
+                <div class="placar-penaltis" id="placar-pen"> (0) - (0) </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                <img src="/static/logos/{{ dados.time_fora }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" alt="Escudo Fora" style="width: 50px; height: 50px; border-radius: 50%; object-fit: contain; background: rgba(255,255,255,0.1); padding: 4px; margin-bottom: 8px; filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.4));">
+                <div class="time-nome">{{ dados.time_fora }}</div>
+            </div>
+        </div>
+    </div>
+
+    <button id="btn-pular" onclick="pularParaFim()">⏭️ Pular Transmissão</button>
+
+    <div class="narracao-container" id="box-evento">
+        <div class="texto-narracao" id="narracao-texto">
+            <span class="minuto">00'</span> O juiz apita e rola a bola!
+        </div>
+    </div>
+    
+    <div class="area-penaltis" id="tela-penaltis">
+        <div class="titulo-penaltis">Disputa de Pênaltis</div>
+        <div class="cobranca-texto" id="texto-cobranca">Preparando para as cobranças...</div>
+        
+        <div class="bolinhas-container">
+            <div class="bolinhas-time" id="bolas-casa"></div>
+            <div class="bolinhas-time" id="bolas-fora"></div>
+        </div>
+    </div>
+
+    <div class="area-fim" id="tela-fim">
+        
+        {% if dados.estatisticas %}
+        <div class="sessao-box">
+            <h3>📊 Estatísticas do Jogo</h3>
+            <div class="linha-estatistica">
+                <div class="stat-valor casa">{{ dados.estatisticas.posse_casa }}%</div>
+                <div class="stat-label">Posse de Bola</div>
+                <div class="stat-valor fora">{{ dados.estatisticas.posse_fora }}%</div>
+            </div>
+            <div class="barra-posse" style="margin-bottom: 12px;">
+                <div class="barra-posse-casa" style="width: {{ dados.estatisticas.posse_casa }}%;"></div>
+            </div>
+            <div class="linha-estatistica"><div class="stat-valor casa">{{ dados.estatisticas.chutes_casa }} ({{ dados.estatisticas.chutes_gol_casa }})</div><div class="stat-label">Chutes (No Gol)</div><div class="stat-valor fora">{{ dados.estatisticas.chutes_fora }} ({{ dados.estatisticas.chutes_gol_fora }})</div></div>
+            <div class="linha-estatistica"><div class="stat-valor casa">{{ dados.estatisticas.defesas_casa }}</div><div class="stat-label">Defesas</div><div class="stat-valor fora">{{ dados.estatisticas.defesas_fora }}</div></div>
+            <div class="linha-estatistica"><div class="stat-valor casa">{{ dados.estatisticas.passes_certos_casa }} / {{ dados.estatisticas.passes_totais_casa }}</div><div class="stat-label">Passes Certos</div><div class="stat-valor fora">{{ dados.estatisticas.passes_certos_fora }} / {{ dados.estatisticas.passes_totais_fora }}</div></div>
+            <div class="linha-estatistica"><div class="stat-valor casa">{{ dados.estatisticas.faltas_casa }}</div><div class="stat-label">Faltas</div><div class="stat-valor fora">{{ dados.estatisticas.faltas_fora }}</div></div>
+        </div>
+        {% endif %}
+
+        <div class="sessao-box">
+            <h3>📜 Resumo do Jogo</h3>
+            <div id="lista-resumo-eventos"></div>
+        </div>
+
+        <div class="sessao-box">
+            <h3 style="color: #FFD700;">⭐ Melhores em Campo</h3>
+            {% for nome, nota in top_3 %}
+                {% set time_do_cara = dados.stats_jogadores[nome].time %}
+                <p style="margin: 10px 0; font-size: 15px; display: flex; justify-content: center; align-items: center;">
+                    <strong style="margin-right: 8px; color: #aaa;">{{ loop.index }}º</strong> 
+                    <img src="/static/logos/{{ time_do_cara }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="20" height="20" style="border-radius: 50%; vertical-align: middle; margin-right: 5px;">
+                    <span style="flex: 0 1 auto; text-align: right; margin-right: 15px; min-width: 120px;">{{ nome }}</span> 
+          
+                    {% if nota >= 7.5 %} {% set bg_color, text_color = '#11c24e', '#ffffff' %}
+                    {% elif nota >= 6.0 %} {% set bg_color, text_color = '#f2a600', '#ffffff' %}
+                    {% else %} {% set bg_color, text_color = '#d81920', '#ffffff' %} {% endif %}
+                    
+                    <span style="background-color: {{ bg_color }}; color: {{ text_color }}; font-weight: bold; padding: 4px 10px; border-radius: 6px; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                        {{ nota }}
+                    </span>
+                </p>
+            {% endfor %}
+        </div>
+        
+         <div class="sessao-box">
+            <h3 style="color: #ff3333;">🐟 Piores em Campo (Bagres)</h3>
+            {% for nome, nota in piores_3 %}
+                {% set time_do_cara = dados.stats_jogadores[nome].time %}
+                <p style="margin: 10px 0; font-size: 15px; display: flex; justify-content: center; align-items: center;">
+                    <strong style="margin-right: 8px; color: #ff3333;">{{ loop.index }}º</strong> 
+                    <img src="/static/logos/{{ time_do_cara }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="20" height="20" style="border-radius: 50%; vertical-align: middle; margin-right: 5px;">
+                    <span style="flex: 0 1 auto; text-align: right; margin-right: 15px; min-width: 120px;">{{ nome }}</span> 
+                    
+                    <span style="background-color: #d81920; color: #ffffff; font-weight: bold; padding: 4px 10px; border-radius: 6px; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                        {{ nota }}
+                    </span>
+                </p>
+            {% endfor %}
+        </div>
+
+        {% if is_torneio %}
+            <a href="/central_torneio" class="btn-voltar">🔙 Voltar para a Central</a>
+        {% else %}
+            <a href="/" class="btn-voltar">🔙 Voltar ao Menu</a>
+        {% endif %}
+    </div>
+
+    <script>
+        const pacoteDados = {{ dados | tojson }};
+        const eventos = pacoteDados.eventos;
+        const timeCasa = pacoteDados.time_casa;
+        const timeFora = pacoteDados.time_fora;
+        
+        const temPenaltis = {{ 'true' if tem_penaltis else 'false' }};
+        const penC_total = {{ pen_c | default(0) }};
+        const penF_total = {{ pen_f | default(0) }};
+        const vencedorPenaltis = "{{ vencedor_penaltis | default('') }}";
+        
+        let placarCasa = 0;
+        let placarFora = 0;
+        let minutoAtual = 1;
+        let indiceEvento = 0;
+        let pular = false;
+        let timerCronometro;
+        
+        const elRelogio = document.getElementById("relogio");
+        const elNarracao = document.getElementById("narracao-texto");
+        const elGolCasa = document.getElementById("gol-casa");
+        const elGolFora = document.getElementById("gol-fora");
+        const elStatus = document.getElementById("status-jogo");
+        const elTelaFim = document.getElementById("tela-fim");
+        const elBoxEvento = document.getElementById("box-evento");
+        const elListaResumo = document.getElementById("lista-resumo-eventos");
+        const btnPular = document.getElementById("btn-pular");
+        
+        const elTelaPenaltis = document.getElementById("tela-penaltis");
+        const elTextoCobranca = document.getElementById("texto-cobranca");
+        const elBolasCasa = document.getElementById("bolas-casa");
+        const elBolasFora = document.getElementById("bolas-fora");
+        const elPlacarPen = document.getElementById("placar-pen");
+
+        function pularParaFim() {
+            pular = true;
+            clearTimeout(timerCronometro);
+            btnPular.style.display = "none";
+
+            elGolCasa.innerText = "{{ dados.gols_casa }}";
+            elGolFora.innerText = "{{ dados.gols_fora }}";
+
+            if (temPenaltis) {
+                elPlacarPen.innerText = `(${penC_total}) - (${penF_total})`;
+                elPlacarPen.style.display = "block";
+                elStatus.innerText = `🏁 ${vencedorPenaltis} VENCE NOS PÊNALTIS!`;
+                elStatus.style.color = "#FFD700";
+            } else {
+                elStatus.innerText = "🏁 ENCERRADO";
+                elStatus.style.color = "#ccc";
+            }
+            
+            elRelogio.innerText = "FIM";
+            elStatus.style.animation = "none";
+            elBoxEvento.style.display = "none";
+            elTelaPenaltis.style.display = "none";
+            
+            gerarResumoFinal();
+            elTelaFim.style.display = "block";
+        }
+
+        function rodarCronometro() {
+            if (pular) return;
+
+            if (indiceEvento >= eventos.length && minutoAtual > 90) {
+                btnPular.style.display = "none";
+                elBoxEvento.style.display = "none";
+                
+                if (temPenaltis) {
+                    elRelogio.innerText = "PEN";
+                    elStatus.innerText = "⚠️ PÊNALTIS!";
+                    elStatus.style.color = "#FFD700";
+                    iniciarAnimacaoPenaltis();
+                } else {
+                    elRelogio.innerText = "FIM";
+                    elStatus.innerText = "🏁 ENCERRADO";
+                    elStatus.style.color = "#ccc";
+                    elStatus.style.animation = "none";
+                    gerarResumoFinal();
+                    elTelaFim.style.display = "block";
+                }
+                return;
+            }
+
+            elRelogio.innerText = minutoAtual > 90 ? "90+" : minutoAtual + "'";
+
+            let tempoEsperaProximoTick = 250; 
+            let teveEventoNesteTick = false;
+
+            if (indiceEvento < eventos.length) {
+                let lanceAtual = eventos[indiceEvento];
+                let minutoLance = parseInt(lanceAtual.minuto.split('+')[0]);
+
+                if (minutoLance <= minutoAtual) {
+                    elBoxEvento.style.opacity = 0.2;
+                    setTimeout(() => { elBoxEvento.style.opacity = 1; }, 100);
+
+                    let formatacao = `<span class="minuto">${lanceAtual.minuto}'</span> `;
+                    
+                    if (lanceAtual.tipo === "gol") {
+                        formatacao += `<span class="gol-destaque">${lanceAtual.texto}</span>`;
+                        if (lanceAtual.equipe === timeCasa) { placarCasa++; elGolCasa.innerText = placarCasa; }
+                        else { placarFora++; elGolFora.innerText = placarFora; }
+                    } 
+                    else if (lanceAtual.tipo === "cartao") {
+                        formatacao += `<span class="cartao-destaque">${lanceAtual.texto}</span>`;
+                    }
+                    else if (lanceAtual.tipo === "var_analise") {
+                        elBoxEvento.style.borderLeftColor = "#00e5ff";
+                        elBoxEvento.style.backgroundColor = "rgba(0, 229, 255, 0.1)";
+                        formatacao += `<span style="color:#00e5ff; font-weight:bold; animation: piscar 1s infinite;">${lanceAtual.texto}</span>`;
+                        tempoEsperaProximoTick = 4000; 
+                    }
+                    else if (lanceAtual.tipo === "var_anulado") { 
+                        elBoxEvento.style.borderLeftColor = "#ff3333";
+                        elBoxEvento.style.backgroundColor = "rgba(255, 51, 51, 0.1)";
+                        formatacao += `<span style="color:#ff3333; font-weight:bold;">${lanceAtual.texto}</span>`;
+                        tempoEsperaProximoTick = 2500;
+                    }
+                    else if (lanceAtual.tipo === "var_anulado_gol") { 
+                        elBoxEvento.style.borderLeftColor = "#ff3333";
+                        elBoxEvento.style.backgroundColor = "rgba(255, 51, 51, 0.1)";
+                        formatacao += `<span style="color:#ff3333; font-weight:bold;">${lanceAtual.texto}</span>`;
+                        
+                        if (lanceAtual.equipe === timeCasa) { placarCasa--; elGolCasa.innerText = placarCasa; }
+                        else { placarFora--; elGolFora.innerText = placarFora; }
+                        
+                        tempoEsperaProximoTick = 2500;
+                    }
+                    else if (lanceAtual.tipo === "var_confirmado") {
+                        elBoxEvento.style.borderLeftColor = "#00ff80";
+                        elBoxEvento.style.backgroundColor = "rgba(0, 255, 128, 0.1)";
+                        formatacao += `<span style="color:#00ff80; font-weight:bold;">${lanceAtual.texto}</span>`;
+                        tempoEsperaProximoTick = 2500;
+                    }
+                    else {
+                        formatacao += lanceAtual.texto;
+                    }
+
+                    if (!lanceAtual.tipo.includes("var")) {
+                        elBoxEvento.style.borderLeftColor = "#ff007f";
+                        elBoxEvento.style.backgroundColor = "rgba(255,255,255,0.04)";
+                    }
+
+                    elNarracao.innerHTML = formatacao;
+                    indiceEvento++;
+                    teveEventoNesteTick = true;
+                    if(!lanceAtual.tipo.includes("var")) {
+                        tempoEsperaProximoTick = 2800; 
+                    }
+                }
+            }
+
+            if (!teveEventoNesteTick) {
+                minutoAtual++;
+            }
+
+            timerCronometro = setTimeout(rodarCronometro, tempoEsperaProximoTick);
+        }
+
+        function iniciarAnimacaoPenaltis() {
+            elTelaPenaltis.style.display = "block";
+            elPlacarPen.style.display = "block";
+            btnPular.style.display = "none"; 
+            
+            let totalCobrancas = Math.max(5, penC_total, penF_total);
+            for(let i=0; i<totalCobrancas; i++) {
+                let bC = document.createElement("div"); bC.className = "bolinha"; elBolasCasa.appendChild(bC);
+                let bF = document.createElement("div"); bF.className = "bolinha"; elBolasFora.appendChild(bF);
+            }
+
+            let batedoresCasa = Object.keys(pacoteDados.stats_jogadores).filter(n => pacoteDados.stats_jogadores[n].time === timeCasa);
+            let batedoresFora = Object.keys(pacoteDados.stats_jogadores).filter(n => pacoteDados.stats_jogadores[n].time === timeFora);
+            if(batedoresCasa.length === 0) batedoresCasa = ["Batedor do " + timeCasa];
+            if(batedoresFora.length === 0) batedoresFora = ["Batedor do " + timeFora];
+
+            let acertosCasa = penC_total;
+            let acertosFora = penF_total;
+            let cobrancasFeitas = 0;
+            let placarAtualC = 0;
+            let placarAtualF = 0;
+            let turno = "casa"; 
+
+            function animarCobranca() {
+                if (pular) return; 
+
+                if (cobrancasFeitas >= totalCobrancas && turno === "casa") {
+                    elTextoCobranca.innerHTML = `<span style="color:#FFD700; font-weight:bold; font-size: 24px;">FIM DA DISPUTA! ${vencedorPenaltis} AVANÇA!</span>`;
+                    elStatus.innerText = "🏁 ENCERRADO";
+                    elStatus.style.color = "#ccc";
+                    elStatus.style.animation = "none";
+                    
+                    setTimeout(() => {
+                        gerarResumoFinal();
+                        elTelaFim.style.display = "block";
+                    }, 2000);
+                    return;
+                }
+
+                let fezGol = false;
+                let containerBolas = turno === "casa" ? elBolasCasa : elBolasFora;
+                let bola = containerBolas.children[cobrancasFeitas];
+                
+                let nomeBatedor = turno === "casa" ? batedoresCasa[cobrancasFeitas % batedoresCasa.length] : batedoresFora[cobrancasFeitas % batedoresFora.length];
+                
+                elTextoCobranca.innerHTML = `<span style="color:#00e5ff; font-weight:bold;">${nomeBatedor}</span> parte pra bola...`;
+                
+                setTimeout(() => {
+                    if(turno === "casa") {
+                        if(acertosCasa > 0 && Math.random() > 0.3 || (totalCobrancas - cobrancasFeitas === acertosCasa)) {
+                            fezGol = true; acertosCasa--; placarAtualC++;
+                        }
+                    } else {
+                        if(acertosFora > 0 && Math.random() > 0.3 || (totalCobrancas - cobrancasFeitas === acertosFora)) {
+                            fezGol = true; acertosFora--; placarAtualF++;
+                        }
+                    }
+
+                    if(fezGol) {
+                        elTextoCobranca.innerHTML = `<span style="color:#00ff80; font-weight:bold;">⚽ GOOOOOOOOL de ${nomeBatedor}!!!</span>`;
+                        bola.classList.add("gol");
+                    } else {
+                        elTextoCobranca.innerHTML = `<span style="color:#ff3333; font-weight:bold;">❌ ${nomeBatedor} PERDEEEEU!!!</span>`;
+                        bola.classList.add("fora");
+                    }
+                    
+                    elPlacarPen.innerText = `(${placarAtualC}) - (${placarAtualF})`;
+
+                    if(turno === "casa") {
+                        turno = "fora";
+                        setTimeout(animarCobranca, 2500);
+                    } else {
+                        turno = "casa";
+                        cobrancasFeitas++;
+                        setTimeout(animarCobranca, 2500);
+                    }
+                }, 1500); 
+            }
+            setTimeout(animarCobranca, 2000);
+        }
+
+        function gerarResumoFinal() {
+            let htmlResumo = "";
+            if (eventos.length === 0) {
+                htmlResumo = "<div class='item-resumo'>Partida sem grandes destaques registrados.</div>";
+            } else {
+                eventos.forEach(ev => {
+                    if (ev.tipo !== "intervalo" && ev.tipo !== "fim" && !ev.tipo.includes("var_analise")) {
+                        let textoColorido = ev.texto;
+                        if (ev.tipo === "gol") textoColorido = `<span class="gol-destaque">${ev.texto}</span>`;
+                        if (ev.tipo === "cartao") textoColorido = `<span class="cartao-destaque">${ev.texto}</span>`;
+                        if (ev.tipo.includes("var_anulado")) textoColorido = `<span style="color: #ff3333; font-weight: bold;">${ev.texto}</span>`;
+                        if (ev.tipo === "var_confirmado") textoColorido = `<span style="color: #00ff80; font-weight: bold;">${ev.texto}</span>`;
+                        
+                        htmlResumo += `
+                            <div class="item-resumo">
+                                <span class="minuto-tag">${ev.minuto}'</span>
+                                <span>${textoColorido}</span>
+                            </div>
+                        `;
+                    }
+                });
+            }
+            
+            if(temPenaltis) {
+                htmlResumo += `
+                    <div class="item-resumo" style="justify-content: center; background: rgba(255,215,0,0.1); border: 1px solid #FFD700; border-radius: 8px; margin-top: 10px; padding: 10px;">
+                        <span style="color: #FFD700; font-weight: bold; font-size: 16px;">VENCEDOR NOS PÊNALTIS: ${vencedorPenaltis}</span>
+                    </div>
+                `;
+            }
+            
+            elListaResumo.innerHTML = htmlResumo;
+        }
+
+        setTimeout(rodarCronometro, 1000);
+    </script>
+</body>
+</html>

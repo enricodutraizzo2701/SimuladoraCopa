@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Partida</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        h1 { color: #00e5ff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.6); text-align: center; }
+        .form-container { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); width: 100%; max-width: 350px; text-align: center; box-sizing: border-box; }
+        select { width: 100%; padding: 15px; margin: 10px 0 25px; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid #00e5ff; border-radius: 10px; font-size: 16px; outline: none; text-align: center;}
+        select option { background: #121212; color: #fff; }
+        .btn-simular { background: #ff007f; color: #fff; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 10px; cursor: pointer; width: 100%; box-shadow: 0 0 15px #ff007f; transition: 0.2s; }
+        .btn-simular:active { transform: scale(0.95); }
+        .logo-preview { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 5px; transition: transform 0.3s;}
+    </style>
+</head>
+<body>
+    <h1>⚽ Jogo Rápido</h1>
+    <div class="form-container">
+        <form action="/simular" method="POST">
+            <label style="color: #00e5ff; font-weight: bold; display: block; margin-bottom: 10px;">Time da Casa</label>
+            <img id="img-casa" class="logo-preview" src="">
+            <select name="time_casa" id="select-casa" onchange="atualizarLogo('select-casa', 'img-casa')">
+                {% for t in times %} <option value="{{ t }}">{{ t }}</option> {% endfor %}
+            </select>
+
+            <h2 style="margin: 0; color: #ff007f;">VS</h2>
+
+            <label style="color: #00e5ff; font-weight: bold; display: block; margin-top: 15px; margin-bottom: 10px;">Time de Fora</label>
+            <img id="img-fora" class="logo-preview" src="">
+            <select name="time_fora" id="select-fora" onchange="atualizarLogo('select-fora', 'img-fora')">
+                {% for t in times %} <option value="{{ t }}" {% if loop.index == 2 %}selected{% endif %}>{{ t }}</option> {% endfor %}
+            </select>
+
+            <button type="submit" class="btn-simular">🔥 SIMULAR PARTIDA</button>
+        </form>
+    </div>
+
+    <script>
+        function atualizarLogo(selectId, imgId) {
+            let select = document.getElementById(selectId);
+            let nomeTime = select.value;
+            let img = document.getElementById(imgId);
+            
+            img.style.transform = "scale(0.8) rotate(-10deg)";
+            setTimeout(() => {
+                img.src = `/static/logos/${nomeTime}.png`;
+                img.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'https://cdn-icons-png.flaticon.com/512/1041/1041258.png';
+                };
+                img.style.transform = "scale(1) rotate(0deg)";
+            }, 150);
+        }
+
+        window.onload = function() {
+            atualizarLogo('select-casa', 'img-casa');
+            atualizarLogo('select-fora', 'img-fora');
+        };
+    </script>
+</body>
+</html>

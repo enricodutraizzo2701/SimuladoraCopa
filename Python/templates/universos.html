@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso - Copa Paródia</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; min-height: 100vh; }
+        h1 { color: #00e5ff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.6); text-align: center; text-transform: uppercase; margin-bottom: 5px;}
+        p.subtitulo { color: #ff007f; font-weight: bold; margin-top: 0; margin-bottom: 25px; letter-spacing: 1px; }
+
+        .form-criar { display: flex; width: 100%; max-width: 450px; margin-bottom: 20px; gap: 10px; }
+        .input-criacao { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #00e5ff; background: rgba(0,0,0,0.5); color: #fff; outline: none; }
+        .btn-criar { background: #00e5ff; color: #000; font-weight: bold; border: none; padding: 0 20px; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .btn-criar:active { transform: scale(0.95); }
+
+        .cards-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 15px; }
+        .card { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .card.ativo { border-color: #00e5ff; box-shadow: 0 0 20px rgba(0, 229, 255, 0.2); background: rgba(0, 229, 255, 0.05); }
+
+        .info h2 { margin: 0 0 5px 0; font-size: 20px; color: #fff; }
+        .info p { margin: 0 0 15px 0; color: #aaa; font-size: 14px; }
+        
+        .badge-ativo { background: #00e5ff; color: #000; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+
+        .botoes-acao { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn-acao { text-decoration: none; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 13px; text-align: center; flex: 1; transition: 0.2s; }
+        .btn-acao:active { transform: scale(0.95); }
+        
+        .btn-ativar { background: #ff007f; color: #fff; }
+        .btn-editar { background: #FFD700; color: #000; }
+        .btn-excluir { background: #ff3333; color: #fff; }
+
+        .btn-voltar { display: block; text-align: center; background: #333; color: #fff; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; max-width: 450px; margin-top: 30px; border: 1px solid #555; }
+    </style>
+</head>
+<body>
+
+    <h1>🌌 Multiverso</h1>
+    <p class="subtitulo">Gerenciador de Saves</p>
+
+    <form action="/criar_universo" method="POST" class="form-criar">
+        <input type="text" name="nome_universo" class="input-criacao" placeholder="Nome do Novo Universo..." required>
+        <button type="submit" class="btn-criar">+ CRIAR</button>
+    </form>
+
+    <div class="cards-container">
+        {% for uni in universos %}
+            <div class="card {% if uni.ativo %}ativo{% endif %}">
+                {% if uni.ativo %}<div class="badge-ativo">ESTÁ ONLINE</div>{% endif %}
+                <div class="info">
+                    <h2>{{ uni.nome_exibicao }}</h2>
+                    <p>⚽ {{ uni.qtd_times }} times registrados</p>
+                </div>
+                
+                <div class="botoes-acao">
+                    {% if not uni.ativo %}
+                        <a href="/set_universo/{{ uni.nome_arquivo }}" class="btn-acao btn-ativar">ATIVAR</a>
+                    {% endif %}
+                    <a href="/editar_universo/{{ uni.nome_arquivo }}" class="btn-acao btn-editar">✏️ EDITAR</a>
+                    {% if uni.nome_arquivo != 'universo_base.json' %}
+                        <a href="/excluir_universo/{{ uni.nome_arquivo }}" class="btn-acao btn-excluir" onclick="return confirm('Tem certeza que deseja apagar este universo para sempre?');">🗑️ EXCLUIR</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="/" class="btn-voltar">🔙 Voltar ao Menu</a>
+
+</body>
+</html>

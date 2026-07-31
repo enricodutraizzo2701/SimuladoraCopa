@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Editar Time</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; min-height: 100vh;}
+        h1 { color: #00e5ff; text-shadow: 0 0 15px rgba(0, 229, 255, 0.6); text-transform: uppercase; margin-bottom: 20px; text-align: center; font-size: 22px;}
+        
+        .container-geral { width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 15px; }
+        
+        /* CARD DE CONFIGURAÇÕES DO TIME */
+        .card-time { background: rgba(0,0,0,0.6); border: 2px solid #ff007f; border-radius: 12px; padding: 15px; box-shadow: 0 0 20px rgba(255,0,127,0.2); }
+        .card-time h3 { color: #FFD700; margin-top: 0; text-transform: uppercase; font-size: 14px; border-left: 4px solid #FFD700; padding-left: 10px; margin-bottom: 10px;}
+        .grupo-input { display: flex; flex-direction: column; margin-bottom: 10px; }
+        .grupo-input label { font-size: 11px; color: #ccc; margin-bottom: 4px; font-weight: bold; text-transform: uppercase;}
+        .grupo-input input { background: rgba(255,255,255,0.1); border: 1px solid #555; color: #fff; padding: 8px; border-radius: 6px; font-size: 13px; outline: none; width: 100%; box-sizing: border-box; transition: 0.3s;}
+        .grupo-input input:focus { border-color: #00e5ff; background: rgba(0, 229, 255, 0.05); }
+        .linha-inputs { display: flex; gap: 10px; }
+        .linha-inputs .grupo-input { flex: 1; }
+        
+        .input-travado { background: rgba(0,0,0,0.5) !important; color: #00ff80 !important; font-weight: bold; border-color: #00ff80 !important; text-align: center;}
+
+        /* CAMPINHO INTERATIVO DINÂMICO */
+        .campo-container { width: 100%; background: #2e8b57; border: 2px solid #fff; border-radius: 10px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.6); position: relative;}
+        
+        .campo-grama { position: relative; width: 100%; aspect-ratio: 2 / 2.8; }
+        .linha-meio { position: absolute; top: 50%; width: 100%; height: 2px; background: rgba(255,255,255,0.6); transform: translateY(-50%);}
+        .circulo-meio { position: absolute; top: 50%; left: 50%; width: 60px; height: 60px; border: 2px solid rgba(255,255,255,0.6); border-radius: 50%; transform: translate(-50%, -50%);}
+        .area-top { position: absolute; top: 0; left: 25%; width: 50%; height: 15%; border: 2px solid rgba(255,255,255,0.6); border-top: none;}
+        .area-bottom { position: absolute; bottom: 0; left: 25%; width: 50%; height: 15%; border: 2px solid rgba(255,255,255,0.6); border-bottom: none;}
+
+        .slot-jogador { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 5; transition: top 0.5s ease, left 0.5s ease;}
+        .bolinha { width: 32px; height: 32px; background: rgba(0,0,0,0.5); border: 2px dashed #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; font-weight: bold; color: #fff; transition: 0.3s;}
+        .slot-jogador.preenchido .bolinha { background: #FFD700; border: 2px solid #000; color: #000; font-size: 12px; box-shadow: 0 0 10px rgba(255,215,0,0.5);}
+        .nome-label { background: rgba(0,0,0,0.8); color: #fff; font-size: 9px; padding: 2px 5px; border-radius: 4px; margin-top: 4px; white-space: nowrap; max-width: 50px; overflow: hidden; text-overflow: ellipsis; font-weight: bold;}
+        .pos-label { font-size: 8px; color: #FFD700; font-weight: bold; margin-bottom: 2px; text-shadow: 1px 1px 2px #000;}
+
+        /* BANCO DE RESERVAS E TÉCNICO */
+        .banco-cartola { background: #1a5233; padding: 15px 10px; display: flex; justify-content: space-between; align-items: flex-start; border-top: 2px solid rgba(255,255,255,0.4); z-index: 5;}
+        .reservas-slots { display: flex; gap: 8px; flex: 1; justify-content: center; }
+        
+        .slot-reserva { display: flex; flex-direction: column; align-items: center; cursor: pointer;}
+        .bolinha-reserva { width: 30px; height: 30px; background: rgba(0,0,0,0.5); border: 2px dashed #aaa; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #aaa; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        .slot-reserva.preenchido .bolinha-reserva { background: #00ff80; color: #000; border: 2px solid #005522; font-size: 11px; box-shadow: 0 0 8px #00ff80; }
+        .label-pos-reserva { font-size: 9px; color: #FFD700; font-weight: bold; margin-top: 4px; text-transform: uppercase; background: rgba(0,0,0,0.6); padding: 2px 4px; border-radius: 3px;}
+        .nome-reserva-label { font-size: 8px; color: #fff; margin-top: 2px; max-width: 40px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        
+        .slot-tecnico { width: 45px; height: 45px; background: #222; border: 2px solid #FFD700; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: 10px; box-shadow: 0 0 8px rgba(255,215,0,0.3); }
+        .slot-tecnico span.tec-titulo { font-size: 10px; color: #FFD700; font-weight: bold; }
+        .slot-tecnico span.tec-nome { font-size: 8px; color: #fff; text-align: center; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 2px; margin-top: 2px;}
+
+        /* MODAL DE EDIÇÃO DE JOGADOR */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 100; justify-content: center; align-items: center;}
+        .modal-box { background: #24243e; border: 2px solid #00e5ff; border-radius: 12px; padding: 20px; width: 90%; max-width: 350px; box-shadow: 0 0 25px rgba(0,229,255,0.3);}
+        .modal-box h2 { color: #00e5ff; margin-top: 0; text-align: center; text-transform: uppercase; font-size: 18px;}
+        
+        .btn-salvar { background: #00ff80; color: #000; padding: 15px; border-radius: 10px; font-weight: bold; width: 100%; border: none; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 0 15px rgba(0,255,128,0.5); transition: 0.2s; margin-top: 15px;}
+        .btn-salvar:active { transform: scale(0.95); }
+        .btn-voltar { display: block; text-align: center; background: #333; color: #fff; padding: 12px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; border: 1px solid #555; margin-top: 10px; box-sizing: border-box; font-size: 14px;}
+    </style>
+</head>
+<body>
+
+    <h1>📝 {{ 'Editar Time' if time_edit else 'Novo Time' }}</h1>
+
+    <form method="POST" id="form-time" class="container-geral">
+        
+        <div class="card-time">
+            <h3>Informações e Força</h3>
+            <div class="linha-inputs">
+                <div class="grupo-input" style="flex: 2;">
+                    <label>Nome do Time</label>
+                    <input type="text" name="nome_time" required value="{{ time_edit.get('nome', '') if time_edit else '' }}">
+                </div>
+                <div class="grupo-input" style="flex: 1;">
+                    <label>Técnico</label>
+                    <input type="text" id="input-tecnico" name="tecnico" value="{{ time_edit.get('tecnico', 'Técnico Genérico') if time_edit else 'Técnico Genérico' }}" oninput="document.getElementById('nome-tec-display').innerText = this.value.substring(0,10)">
+                </div>
+            </div>
+            <div class="grupo-input">
+                <label>URL do Escudo (Opcional)</label>
+                <input type="text" name="escudo" value="{{ time_edit.get('escudo', '') if time_edit else '' }}" placeholder="Link da imagem...">
+            </div>
+            
+            <div class="linha-inputs" style="margin-top: 5px;">
+                <div class="grupo-input"><label>Ata</label><input type="number" name="ataque" required readonly class="input-travado" placeholder="Auto"></div>
+                <div class="grupo-input"><label>Mei</label><input type="number" name="meio" required readonly class="input-travado" placeholder="Auto"></div>
+                <div class="grupo-input"><label>Def</label><input type="number" name="defesa" required readonly class="input-travado" placeholder="Auto"></div>
+                <div class="grupo-input"><label>Gol</label><input type="number" name="goleiro" required readonly class="input-travado" placeholder="Auto"></div>
+            </div>
+        </div>
+
+        <div class="campo-container">
+            <div class="campo-grama">
+                <div class="linha-meio"></div>
+                <div class="circulo-meio"></div>
+                <div class="area-top"></div>
+                <div class="area-bottom"></div>
+                
+                {% set pos_padrao = ['GOL', 'LE', 'ZAG', 'ZAG', 'LD', 'VOL', 'VOL', 'MEI', 'PE', 'PD', 'ATA'] %}
+                {% for i in range(1, 12) %}
+                
+                {% set idx = loop.index0 %}
+                {% set j_nome = time_edit.get('jogadores', [])[idx].get('nome', '') if time_edit and time_edit.get('jogadores')|length > idx else '' %}
+                {% set j_pos = time_edit.get('jogadores', [])[idx].get('posicao', pos_padrao[idx]) if time_edit and time_edit.get('jogadores')|length > idx else pos_padrao[idx] %}
+                {% set j_ovr = time_edit.get('jogadores', [])[idx].get('ovr', '') if time_edit and time_edit.get('jogadores')|length > idx else '' %}
+                
+                <div class="slot-jogador" id="slot-{{ i }}" onclick="abrirModal({{ i }}, false, document.getElementById('hidden_pos_{{ i }}').value)">
+                    <div class="pos-label" id="label-pos-{{ i }}">{{ j_pos }}</div>
+                    <div class="bolinha">+</div>
+                    <div class="nome-label" style="display:none;"></div>
+                    
+                    <input type="hidden" name="nome_j{{ i }}" id="hidden_nome_{{ i }}" value="{{ j_nome }}">
+                    <input type="hidden" name="pos_j{{ i }}" id="hidden_pos_{{ i }}" value="{{ j_pos }}">
+                    <input type="hidden" name="ovr_j{{ i }}" id="hidden_ovr_{{ i }}" value="{{ j_ovr }}">
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="banco-cartola">
+                <div class="reservas-slots">
+                    {% set pos_reservas = ['GOL', 'LAT', 'ZAG', 'MEI', 'ATA'] %}
+                    {% for i in range(12, 17) %}
+                    
+                    {% set idx = loop.index0 + 11 %}
+                    {% set r_nome = time_edit.get('jogadores', [])[idx].get('nome', '') if time_edit and time_edit.get('jogadores')|length > idx else '' %}
+                    {% set r_ovr = time_edit.get('jogadores', [])[idx].get('ovr', '') if time_edit and time_edit.get('jogadores')|length > idx else '' %}
+                    
+                    <div class="slot-reserva" id="slot-{{ i }}" onclick="abrirModal({{ i }}, true, '{{ pos_reservas[loop.index0] }}')">
+                        <div class="bolinha-reserva">+</div>
+                        <div class="label-pos-reserva">{{ pos_reservas[loop.index0] }}</div>
+                        <div class="nome-reserva-label"></div>
+                        
+                        <input type="hidden" name="nome_j{{ i }}" id="hidden_nome_{{ i }}" value="{{ r_nome }}">
+                        <input type="hidden" name="pos_j{{ i }}" id="hidden_pos_{{ i }}" value="{{ pos_reservas[loop.index0] }}">
+                        <input type="hidden" name="ovr_j{{ i }}" id="hidden_ovr_{{ i }}" value="{{ r_ovr }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="slot-tecnico">
+                    <span class="tec-titulo">TÉC</span>
+                    <span class="tec-nome" id="nome-tec-display">{{ time_edit.get('tecnico', 'Genérico')[:10] if time_edit else 'Genérico' }}</span>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-salvar" onclick="return validarTimeCompleto()">💾 Salvar Time Completo</button>
+        <a href="/editar_universo/{{ nome_arquivo }}" class="btn-voltar">🔙 Cancelar</a>
+    </form>
+
+    <div class="modal-overlay" id="modal-jogador">
+        <div class="modal-box">
+            <h2 id="modal-titulo">Escalar Jogador</h2>
+            <input type="hidden" id="modal-id">
+            
+            <div class="grupo-input">
+                <label>Nome do Jogador</label>
+                <input type="text" id="modal-nome" placeholder="Ex: Po, Goku, Naruto..." autocomplete="off">
+            </div>
+            
+            <div class="linha-inputs">
+                <div class="grupo-input">
+                    <label>Posição</label>
+                    <input type="text" id="modal-pos" maxlength="3" placeholder="ATA, MEI, ZAG..." style="text-transform: uppercase;">
+                </div>
+                <div class="grupo-input">
+                    <label>Overall (OVR)</label>
+                    <input type="number" id="modal-ovr" min="1" max="99" placeholder="Ex: 85">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="confirmarJogador()" type="button" style="margin-top: 5px;">✅ Confirmar</button>
+            <button class="btn-voltar" onclick="fecharModal()" type="button">❌ Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal-jogador');
+        const mId = document.getElementById('modal-id');
+        const mNome = document.getElementById('modal-nome');
+        const mPos = document.getElementById('modal-pos');
+        const mOvr = document.getElementById('modal-ovr');
+        const mTitulo = document.getElementById('modal-titulo');
+
+        function abrirModal(id, isReserva, posSugerida) {
+            mId.value = id;
+            mTitulo.innerText = isReserva ? "Escalar Reserva" : "Escalar Titular";
+            
+            mNome.value = document.getElementById(`hidden_nome_${id}`).value;
+            mPos.value = document.getElementById(`hidden_pos_${id}`).value || posSugerida;
+            mOvr.value = document.getElementById(`hidden_ovr_${id}`).value;
+
+            if(isReserva) {
+                mPos.readOnly = true;
+                mPos.style.opacity = "0.5";
+            } else {
+                mPos.readOnly = false;
+                mPos.style.opacity = "1";
+            }
+
+            modal.style.display = 'flex';
+            mNome.focus();
+        }
+
+        function fecharModal() {
+            modal.style.display = 'none';
+        }
+
+        function confirmarJogador() {
+            if(!mNome.value || !mPos.value || !mOvr.value) {
+                alert("Preencha todos os campos do jogador!");
+                return;
+            }
+
+            let id = mId.value;
+            let nome = mNome.value;
+            let pos = mPos.value.toUpperCase();
+            let ovr = mOvr.value;
+
+            document.getElementById(`hidden_nome_${id}`).value = nome;
+            document.getElementById(`hidden_pos_${id}`).value = pos;
+            document.getElementById(`hidden_ovr_${id}`).value = ovr;
+
+            atualizarCampinhoGeral();
+            fecharModal();
+        }
+
+        function atualizarCampinhoGeral() {
+            let linhas = { 'GOL': [], 'DEF': [], 'VOL': [], 'MEI': [], 'ATA': [] };
+            
+            // 1. Agrupa os jogadores nas linhas corretas
+            for(let i=1; i<=11; i++) {
+                let pos = document.getElementById(`hidden_pos_${i}`).value.toUpperCase() || 'MC';
+                let slot = document.getElementById(`slot-${i}`);
+                
+                document.getElementById(`label-pos-${i}`).innerText = pos;
+                let obj = { slot: slot, pos: pos };
+                
+                if(['GOL'].includes(pos)) linhas['GOL'].push(obj);
+                else if(['ZAG','LE','LD','DEF','LAT'].includes(pos)) linhas['DEF'].push(obj);
+                else if(['VOL','MC'].includes(pos)) linhas['VOL'].push(obj);
+                else if(['MEI','ME','MD','ML'].includes(pos)) linhas['MEI'].push(obj);
+                else if(['ATA','SA','PE','PD','CA'].includes(pos)) linhas['ATA'].push(obj);
+                else linhas['MEI'].push(obj); 
+                
+                let nome = document.getElementById(`hidden_nome_${i}`).value;
+                let ovr = document.getElementById(`hidden_ovr_${i}`).value;
+                if(nome && ovr) {
+                    slot.classList.add('preenchido');
+                    slot.querySelector('.bolinha').innerText = ovr;
+                    slot.querySelector('.nome-label').innerText = nome;
+                    slot.querySelector('.nome-label').style.display = "block";
+                }
+            }
+
+            // Pesos para arrumar a ordem horizontal: Esquerda (1), Meio (2), Direita (3)
+            const horizOrder = {
+                'LE': 1, 'PE': 1, 'ME': 1, 'ML': 1,
+                'ZAG': 2, 'VOL': 2, 'MC': 2, 'MEI': 2, 'ATA': 2, 'CA': 2, 'SA': 2, 'GOL': 2, 'DEF': 2, 'LAT': 2,
+                'LD': 3, 'PD': 3, 'MD': 3
+            };
+            
+            const yMap = { 'GOL': 88, 'DEF': 72, 'VOL': 56, 'MEI': 38, 'ATA': 18 };
+            
+            // 2. Ordena cada linha para não deixar o PD no meio ou o ZAG na lateral
+            for(let tipo in linhas) {
+                let jogLinha = linhas[tipo];
+                
+                jogLinha.sort((a, b) => {
+                    let valA = horizOrder[a.pos] || 2;
+                    let valB = horizOrder[b.pos] || 2;
+                    return valA - valB;
+                });
+
+                let count = jogLinha.length;
+                jogLinha.forEach((item, index) => {
+                    let x = (index + 0.5) * (100 / count);
+                    item.slot.style.left = `${x}%`;
+                    item.slot.style.top = `${yMap[tipo]}%`;
+                });
+            }
+
+            for(let i=12; i<=16; i++) {
+                let nome = document.getElementById(`hidden_nome_${i}`).value;
+                let ovr = document.getElementById(`hidden_ovr_${i}`).value;
+                let slot = document.getElementById(`slot-${i}`);
+                if(nome && ovr) {
+                    slot.classList.add('preenchido');
+                    slot.querySelector('.bolinha-reserva').innerText = ovr;
+                    slot.querySelector('.nome-reserva-label').innerText = nome;
+                }
+            }
+
+            calcularForcas();
+        }
+
+        function calcularForcas() {
+            let somas = { 'ATA': 0, 'MEI': 0, 'DEF': 0, 'GOL': 0 };
+            let count = { 'ATA': 0, 'MEI': 0, 'DEF': 0, 'GOL': 0 };
+
+            for(let i = 1; i <= 11; i++) {
+                let pos = document.getElementById(`hidden_pos_${i}`).value.toUpperCase();
+                let ovr = parseInt(document.getElementById(`hidden_ovr_${i}`).value) || 0;
+
+                if(ovr > 0) {
+                    if(['GOL'].includes(pos)) { somas['GOL'] += ovr; count['GOL']++; }
+                    else if(['ZAG','LE','LD','DEF','LAT'].includes(pos)) { somas['DEF'] += ovr; count['DEF']++; }
+                    else if(['VOL','MC','MEI','ME','MD','ML'].includes(pos)) { somas['MEI'] += ovr; count['MEI']++; }
+                    else if(['ATA','SA','PE','PD','CA'].includes(pos)) { somas['ATA'] += ovr; count['ATA']++; } 
+                    else { somas['MEI'] += ovr; count['MEI']++; }
+                }
+            }
+
+            document.querySelector('input[name="ataque"]').value = count['ATA'] > 0 ? Math.round(somas['ATA'] / count['ATA']) : '';
+            document.querySelector('input[name="meio"]').value = count['MEI'] > 0 ? Math.round(somas['MEI'] / count['MEI']) : '';
+            document.querySelector('input[name="defesa"]').value = count['DEF'] > 0 ? Math.round(somas['DEF'] / count['DEF']) : '';
+            document.querySelector('input[name="goleiro"]').value = count['GOL'] > 0 ? Math.round(somas['GOL'] / count['GOL']) : '';
+        }
+
+        function validarTimeCompleto() {
+            for(let i=1; i<=16; i++) {
+                if(!document.getElementById(`hidden_nome_${i}`).value) {
+                    alert(`Opa! Você esqueceu de escalar o jogador do Slot ${i}! Preencha todo o campo e o banco.`);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        window.onload = function() {
+            atualizarCampinhoGeral();
+        };
+    </script>
+</body>
+</html>

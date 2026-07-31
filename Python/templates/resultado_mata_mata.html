@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Copa Paródia</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        h1 { color: #00e5ff; text-transform: uppercase; margin-bottom: 20px; text-align: center;}
+        
+        .resultado-box { background: rgba(0,0,0,0.6); border-radius: 12px; padding: 15px; width: 100%; max-width: 450px; margin-bottom: 15px; border-left: 5px solid #ff007f; }
+        .placar { font-size: 24px; font-weight: bold; color: #FFD700; text-align: center; margin: 10px 0; }
+        .times { display: flex; justify-content: space-between; font-size: 16px; }
+        .vencedor { color: #00ff80; font-weight: bold; text-align: center; font-size: 14px; margin-top: 5px; }
+        
+        .campeao-box { background: rgba(255, 215, 0, 0.2); border: 2px solid #FFD700; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); margin-top: 20px; width: 100%; max-width: 450px;}
+        .campeao-box h2 { color: #FFD700; margin: 0 0 10px 0; font-size: 32px; text-transform: uppercase; }
+
+        .btn-acao { display: block; text-align: center; background: #00e5ff; color: #000; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; max-width: 450px; margin-top: 20px; text-transform: uppercase;}
+    </style>
+</head>
+<body>
+    <h1>Resultados da Rodada</h1>
+    
+    {% for res in resultados %}
+        <div class="resultado-box">
+            <div class="times">
+                <span>{{ res.casa }}</span>
+                <span>{{ res.fora }}</span>
+            </div>
+            <div class="placar">{{ res.placar }}</div>
+            <div class="vencedor">Classificado: {{ res.vencedor }}</div>
+        </div>
+    {% endfor %}
+
+    {% if campeao %}
+        <div class="campeao-box">
+            <div style="font-size: 50px;">🏆</div>
+            <div style="font-size: 18px; color: #fff; margin-bottom: 5px;">O GRANDE CAMPEÃO É:</div>
+            <h2>{{ campeao }}</h2>
+        </div>
+        <a href="/" class="btn-acao">Voltar ao Menu Principal</a>
+    {% else %}
+        <a href="/sortear_mata_mata" class="btn-acao">Avançar para a Próxima Fase 🚀</a>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central da Copa</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; min-height: 100vh; box-sizing: border-box;}
+        h1 { color: #FFD700; text-transform: uppercase; margin-bottom: 15px; text-align: center;}
+        
+        .painel-confronto { background: rgba(0, 0, 0, 0.7); border: 2px solid #00e5ff; border-radius: 15px; padding: 20px; width: 100%; max-width: 450px; box-shadow: 0 0 25px rgba(0, 229, 255, 0.2); text-align: center; margin-bottom: 25px; }
+        .fase-tag { color: #ff007f; font-weight: bold; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+        .times-confronto { font-size: 22px; font-weight: bold; color: #fff; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+        .vs { color: #ff007f; font-size: 16px; }
+
+        .btn-jogar { display: block; background: #ff007f; color: #fff; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 18px; box-shadow: 0 0 15px #ff007f; transition: 0.2s; text-transform: uppercase; }
+        .btn-jogar:active { transform: scale(0.95); }
+        .btn-avancar { display: block; background: #00ff80; color: #000; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 18px; box-shadow: 0 0 15px #00ff80; text-transform: uppercase; margin-top: 15px;}
+
+        /* Tabelas */
+        .grid-tabelas { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; width: 100%; max-width: 900px; }
+        .box-tabela { background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: 12px; padding: 15px; width: 100%; max-width: 400px; box-sizing: border-box;}
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { padding: 8px; text-align: center; color: #ccc; border-bottom: 1px solid rgba(255,215,0,0.3);}
+        td { padding: 8px 5px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .nome-time-col { text-align: left; font-weight: bold; }
+        .classificado { background: rgba(0, 255, 128, 0.1); border-left: 4px solid #00ff80; }
+        
+        .btn-pular-fase { display: block; background: #FFD700; color: #000; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); transition: 0.2s; text-transform: uppercase; margin-top: 10px; }
+        
+        /* Chaveamento Mata-Mata */
+        .chaveamento-box { background: rgba(0,0,0,0.5); border: 1px solid #ff007f; padding: 15px; border-radius: 10px; width: 100%; max-width: 450px; text-align: center; margin-bottom: 15px;}
+        .confronto-item { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; margin: 8px 0; font-size: 15px; display: flex; justify-content: space-around; align-items: center;}
+    </style>
+</head>
+<body>
+
+    <h1>🏆 Central da Copa</h1>
+
+    <div class="painel-confronto">
+        {% if proximo_jogo %}
+            <div class="fase-tag">📌 {{ proximo_jogo.grupo }}</div>
+            <div class="times-confronto">
+                <span style="display: flex; align-items: center; gap: 8px;"><img src="/static/logos/{{ proximo_jogo.casa }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="40" height="40" style="border-radius: 50%;"> {{ proximo_jogo.casa }}</span>
+                <span class="vs">VS</span> 
+                <span style="display: flex; align-items: center; gap: 8px;">{{ proximo_jogo.fora }} <img src="/static/logos/{{ proximo_jogo.fora }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="40" height="40" style="border-radius: 50%;"></span>
+            </div>
+            <a href="/simular_jogo_torneio" class="btn-jogar">▶️ Simular Partida</a>
+            
+            {% if proximo_jogo.fase == "Fase de Grupos" %}
+                <a href="/simular_grupos_completo" class="btn-pular-fase" onclick="return confirm('Deseja simular o resto da Fase de Grupos instantaneamente?');">⏩ Simular Toda Fase de Grupos</a>
+            {% endif %}
+
+        {% else %}
+            {% if torneio.fase_atual == "fim_grupos" %}
+                <div class="fase-tag" style="color: #00ff80;">🏁 FASE DE GRUPOS ENCERRADA</div>
+                <p>Confira a classificação final abaixo!</p>
+                <a href="/sortear_mata_mata" class="btn-avancar">Sortear Mata-Mata ⚔️</a>
+            {% elif torneio.fase_atual == "encerrado" %}
+                <div class="fase-tag" style="color: #FFD700;">🏆 COPA ENCERRADA</div>
+                <p>O Grande Campeão foi coroado!</p>
+                <a href="/hall_da_fama" class="btn-avancar">Ir para o Hall da Fama 🌟</a>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    {% if torneio.fase_atual == "grupos" or torneio.fase_atual == "fim_grupos" %}
+        <h2 style="color: #00e5ff; text-align: center;">Tabelas de Classificação</h2>
+        <div class="grid-tabelas">
+            {% for nome_grupo, tabela in torneio.tabelas.items() %}
+                {% if torneio.fase_atual == "fim_grupos" or (proximo_jogo and proximo_jogo.grupo == nome_grupo) %}
+                <div class="box-tabela">
+                    <h3 style="color: #FFD700; margin-top:0; text-align: center;">{{ nome_grupo }}</h3>
+                    <table>
+                        <thead><tr><th>#</th><th class="nome-time-col">Time</th><th>Pts</th><th>J</th><th>SG</th></tr></thead>
+                        <tbody>
+                            {% for t in tabela %}
+                            <tr class="{% if loop.index0 < 2 %}classificado{% endif %}">
+                                <td>{{ loop.index }}</td>
+                                <td class="nome-time-col"><img src="/static/logos/{{ t.Nome }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="20" height="20" style="border-radius: 50%; vertical-align: middle; margin-right: 5px;">{{ t.Nome }}</td>
+                                <td style="color: #00e5ff; font-weight: bold;">{{ t.Pts }}</td><td>{{ t.J }}</td><td>{{ t.SG }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if torneio.fase_atual == "mata_mata" %}
+        <h2 style="color: #ff007f; text-align: center;">⚔️ Chaveamento Atual</h2>
+        <div class="chaveamento-box">
+            {% for jogo in torneio.confrontos_atuais %}
+                <div class="confronto-item">
+                    <span style="flex: 1; text-align: right; display: flex; align-items: center; justify-content: flex-end; gap: 8px;">{{ jogo[0] }} <img src="/static/logos/{{ jogo[0] }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="25" height="25" style="border-radius: 50%;"></span>
+                    <span style="color:#ff007f; margin: 0 10px;">X</span>
+                    <span style="flex: 1; text-align: left; display: flex; align-items: center; justify-content: flex-start; gap: 8px;"><img src="/static/logos/{{ jogo[1] }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="25" height="25" style="border-radius: 50%;"> {{ jogo[1] }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</body>
+</html>

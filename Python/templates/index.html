@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Copa Paródia - Multiverso</title>
+    <style>
+        /* Fundo do Multiverso (Degradê Espacial) */
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Título com brilho Neon Ciano */
+        h1 {
+            color: #00e5ff;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.4);
+            text-align: center;
+            font-size: 28px;
+        }
+
+        /* Subtítulo em Rosa Cyberpunk */
+        p.subtitulo {
+            color: #ff007f;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* Container do Menu */
+        .menu-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Botões Efeito Vidro (Glassmorphism) */
+        .btn {
+            background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+            backdrop-filter: blur(10px); /* Efeito de vidro borrado */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #00e5ff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Efeito ao clicar no botão */
+        .btn:active {
+            transform: scale(0.95);
+            background: #00e5ff;
+            color: #0f0c29;
+            box-shadow: 0 0 20px #00e5ff;
+            border-color: #00e5ff;
+        }
+        
+        /* Ajuste fino para os emojis não ficarem zoados com a cor neon */
+        .emoji {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Copa Paródia</h1>
+    <p class="subtitulo">O Multiverso do Futebol</p>
+
+    <div class="menu-container">
+       <a href="/iniciar_torneio" class="btn" style="text-decoration: none;"><span class="emoji">🎲</span> Iniciar Torneio</a>
+        <a href="/jogo_rapido" class="btn" style="text-decoration: none;"><span class="emoji">⚽</span> Jogo Rápido</a>
+        <a href="/universos" class="btn" style="text-decoration: none;"><span class="emoji">🌌</span> Gerenciar Universos</a>
+        <a href="/hall_da_fama" class="btn" style="text-decoration: none;"><span class="emoji">🏛️</span> Hall da Fama</a>
+    </div>
+
+</body>
+</html>

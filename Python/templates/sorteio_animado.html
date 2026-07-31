@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio dos Grupos - Copa Paródia</title>
+    <style>
+        body { 
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+            color: #fff; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px; 
+            margin: 0; 
+            min-height: 100vh; 
+            box-sizing: border-box;
+        }
+
+        h1 { color: #FFD700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.6); text-align: center; text-transform: uppercase; margin-bottom: 5px; font-size: 26px;}
+        p.subtitulo { color: #ff007f; font-weight: bold; margin-top: 0; margin-bottom: 25px; letter-spacing: 2px; text-transform: uppercase; text-align: center; animation: piscar 1.2s infinite; }
+
+        @keyframes piscar { 50% { opacity: 0.4; } }
+
+        .grid-grupos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 25px;
+        }
+
+        .card-grupo { 
+            background: rgba(0, 0, 0, 0.6); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(0, 229, 255, 0.3); 
+            border-radius: 12px; 
+            padding: 15px; 
+            width: 100%; 
+            max-width: 320px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-sizing: border-box;
+        }
+
+        .card-grupo h2 { color: #00e5ff; margin-top: 0; margin-bottom: 10px; border-bottom: 1px solid rgba(0,229,255,0.3); padding-bottom: 5px; text-align: center; font-size: 20px;}
+
+        .lista-times { list-style: none; padding: 0; margin: 0; min-height: 120px; }
+        .slot-time { 
+            font-size: 15px; 
+            color: #fff; 
+            padding: 8px 10px; 
+            margin-bottom: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            border-left: 3px solid #ff007f;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+        }
+        .slot-time.revelado {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-avancar { 
+            display: none;
+            background: #00e5ff; 
+            color: #000; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            font-size: 18px;
+            box-shadow: 0 0 25px #00e5ff; 
+            text-transform: uppercase;
+            text-align: center;
+            animation: subir 0.5s ease;
+            margin-top: 20px;
+        }
+        @keyframes subir { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <h1>🎲 SORTEIO DA COPA</h1>
+    <p class="subtitulo" id="status-sorteio">Sorteando as bolinhas...</p>
+
+    <div class="grid-grupos" id="container-grupos"></div>
+
+    <div id="ancora-final" style="width: 100%; display: flex; justify-content: center; padding-bottom: 50px;">
+        <a href="/central_torneio" class="btn-avancar" id="btn-ir-central">IR PARA A CENTRAL DA COPA 🚀</a>
+    </div>
+
+    <script>
+        const gruposData = {{ grupos | tojson }};
+        const container = document.getElementById("container-grupos");
+        const statusTexto = document.getElementById("status-sorteio");
+        const btnAvancar = document.getElementById("btn-ir-central");
+        const ancoraFinal = document.getElementById("ancora-final");
+
+        // Monta a estrutura inicial vazia dos grupos
+        for (let nomeGrupo in gruposData) {
+            let card = document.createElement("div");
+            card.className = "card-grupo";
+            card.innerHTML = `<h2>${nomeGrupo}</h2><div class="lista-times" id="lista-${nomeGrupo.replace(' ', '-')}"></div>`;
+            container.appendChild(card);
+        }
+
+        // Fila de animação: Pega um time por vez de cada grupo para revelar alternadamente
+        let filaAnimacao = [];
+        let maxTimes = 0;
+        for (let g in gruposData) {
+            if (gruposData[g].length > maxTimes) maxTimes = gruposData[g].length;
+        }
+
+        for (let i = 0; i < maxTimes; i++) {
+            for (let g in gruposData) {
+                if (gruposData[g][i]) {
+                    filaAnimacao.push({ grupo: g, time: gruposData[g][i] });
+                }
+            }
+        }
+
+        let idx = 0;
+        function animarSorteio() {
+            if (idx < filaAnimacao.length) {
+                let item = filaAnimacao[idx];
+                let listaEl = document.getElementById(`lista-${item.grupo.replace(' ', '-')}`);
+                
+                let slot = document.createElement("div");
+                slot.className = "slot-time";
+                slot.innerHTML = "<img src='/static/logos/" + item.time + ".png' onerror=\"this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png'\" width='25' height='25' style='border-radius: 50%; vertical-align: middle; margin-right: 10px;'> " + item.time;
+                listaEl.appendChild(slot);
+
+                // ✨ O truque de câmera da TV: faz a tela rolar suavemente até o grupo atual
+                slot.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Pequeno delay para acionar a transição CSS de fade
+                setTimeout(() => { slot.classList.add("revelado"); }, 50);
+
+                idx++;
+                // ⏱️ A velocidade do sorteio foi ajustada aqui (de 600 para 900)
+                setTimeout(animarSorteio, 900); 
+            } else {
+                statusTexto.innerText = "✨ SORTEIO CONCLUÍDO! ✨";
+                statusTexto.style.color = "#00ff80";
+                statusTexto.style.animation = "none";
+                btnAvancar.style.display = "inline-block";
+                
+                // Rola a tela até o botão no final para o usuário seguir em frente
+                ancoraFinal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Dá 1 segundo antes de começar
+        setTimeout(animarSorteio, 1000);
+    </script>
+</body>
+</html>

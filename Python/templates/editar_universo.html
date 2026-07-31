@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Universo</title>
+    <style>
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; min-height: 100vh; }
+        h1 { color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); text-align: center; margin-bottom: 5px; font-size: 24px;}
+        p.subtitulo { color: #00e5ff; font-weight: bold; margin-top: 0; margin-bottom: 25px; letter-spacing: 1px; text-transform: uppercase;}
+
+        .sessao-box { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px; width: 100%; max-width: 450px; box-sizing: border-box; }
+        .sessao-box h3 { color: #ff007f; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid rgba(255,0,127,0.3); padding-bottom: 10px; }
+
+        .form-importar { display: flex; flex-direction: column; gap: 10px; }
+        select { padding: 12px; border-radius: 8px; border: 1px solid #00e5ff; background: rgba(255,255,255,0.1); color: #fff; outline: none; font-size: 16px; }
+        select option { background: #121212; color: #fff; }
+        .btn-importar { background: #00e5ff; color: #000; font-weight: bold; border: none; padding: 12px; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .btn-importar:active { transform: scale(0.95); }
+
+        .item-time { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .item-time:last-child { border-bottom: none; }
+        .nome-time { font-size: 16px; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 10px;}
+        .stats-time { font-size: 12px; color: #aaa; margin-top: 4px; margin-left: 45px;}
+        
+        .acoes-time { display: flex; gap: 8px; }
+        .btn-remover { background: #ff3333; color: #fff; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+        .btn-editar { background: #FFD700; color: #000; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+
+        .btn-voltar { display: block; text-align: center; background: #333; color: #fff; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; max-width: 450px; margin-top: 10px; border: 1px solid #555; }
+    </style>
+</head>
+<body>
+
+    <h1>🛠️ EDITAR UNIVERSO</h1>
+    <p class="subtitulo">{{ nome_arquivo.replace('.json', '').replace('_', ' ') }}</p>
+
+    <a href="/criar_time/{{ nome_arquivo }}" style="display: block; text-align: center; background: #FFD700; color: #000; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; width: 100%; max-width: 450px; margin-bottom: 20px; box-sizing: border-box; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); text-transform: uppercase;">
+        ✨ Criar Novo Time do Zero
+    </a>
+
+    <div class="sessao-box">
+        <h3>📥 Importar do Banco Base</h3>
+        <form action="/importar_time/{{ nome_arquivo }}" method="POST" class="form-importar">
+            <select name="time_importar" required>
+                <option value="" disabled selected>Escolha um time para importar...</option>
+                {% for t in times_disponiveis %}
+                    <option value="{{ t }}">{{ t }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn-importar">+ ADICIONAR TIME</button>
+        </form>
+    </div>
+
+    <div class="sessao-box">
+        <h3>⚽ Times Neste Universo ({{ times|length }})</h3>
+        
+        {% if times|length == 0 %}
+            <p style="color: #aaa; text-align: center; font-style: italic;">Este universo está vazio.</p>
+        {% endif %}
+
+        {% for nome_time, info in times.items() %}
+            <div class="item-time">
+                <div style="flex: 1;">
+                    <div class="nome-time">
+                        <img src="/static/logos/{{ nome_time }}.png" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/1041/1041258.png';" width="35" height="35" style="border-radius: 50%; object-fit: contain; background: rgba(255,255,255,0.1); padding: 2px;">
+                        {{ nome_time }}
+                    </div>
+                    <div class="stats-time">
+                        OVR: <span style="color:#00ff80;">{{ info.ataque }}</span> | TÉC: {{ info.tecnico[:10] }}
+                    </div>
+                </div>
+                <div class="acoes-time">
+                    <a href="/editar_time_clube/{{ nome_arquivo }}/{{ nome_time }}" class="btn-editar">✏️</a>
+                    <a href="/remover_time/{{ nome_arquivo }}/{{ nome_time }}" class="btn-remover" onclick="return confirm('Remover {{ nome_time }} deste universo?');">❌</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="/universos" class="btn-voltar">🔙 Voltar para Universos</a>
+
+</body>
+</html>
