@@ -1,0 +1,5239 @@
+{
+    "fase_atual": "mata_mata",
+    "grupos": {
+        "Grupo A": [
+            "Assassins Creed",
+            "One Piece",
+            "Política da Zoeira",
+            "Ícones do Pop"
+        ],
+        "Grupo B": [
+            "Velozes e Furiosos",
+            "Kung Fu Panda",
+            "Disney",
+            "Ícones do Hip-Hop"
+        ],
+        "Grupo C": [
+            "Breaking Bad",
+            "GTA",
+            "The Boys",
+            "Sonic"
+        ],
+        "Grupo D": [
+            "Jujutsu Kaisen",
+            "Mario",
+            "Madagascar",
+            "Looney Tunes"
+        ],
+        "Grupo E": [
+            "Padrinhos Mágicos",
+            "Consoles",
+            "Red Dead Redemption",
+            "Círculo de Fogo"
+        ],
+        "Grupo F": [
+            "Naruto",
+            "Rei Leão",
+            "Shrek 4",
+            "God of War"
+        ],
+        "Grupo G": [
+            "Carros",
+            "Dead by Daylight",
+            "Transformers",
+            "Bleach"
+        ],
+        "Grupo H": [
+            "Toronto FC",
+            "La Casa de Papel",
+            "Dragon Ball",
+            "Blue Lock"
+        ]
+    },
+    "tabelas": {
+        "Grupo A": [
+            {
+                "Nome": "Assassins Creed",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 4,
+                "GC": 4,
+                "SG": 0
+            },
+            {
+                "Nome": "One Piece",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 5,
+                "GC": 4,
+                "SG": 1
+            },
+            {
+                "Nome": "Política da Zoeira",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 5,
+                "GC": 5,
+                "SG": 0
+            },
+            {
+                "Nome": "Ícones do Pop",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 5,
+                "GC": 6,
+                "SG": -1
+            }
+        ],
+        "Grupo B": [
+            {
+                "Nome": "Kung Fu Panda",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 3,
+                "GC": 1,
+                "SG": 2
+            },
+            {
+                "Nome": "Velozes e Furiosos",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 3,
+                "GC": 5,
+                "SG": -2
+            },
+            {
+                "Nome": "Ícones do Hip-Hop",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 4,
+                "GC": 2,
+                "SG": 2
+            },
+            {
+                "Nome": "Disney",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 1,
+                "GC": 3,
+                "SG": -2
+            }
+        ],
+        "Grupo C": [
+            {
+                "Nome": "Sonic",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 3,
+                "GC": 2,
+                "SG": 1
+            },
+            {
+                "Nome": "GTA",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 4,
+                "GC": 3,
+                "SG": 1
+            },
+            {
+                "Nome": "Breaking Bad",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 4,
+                "GC": 4,
+                "SG": 0
+            },
+            {
+                "Nome": "The Boys",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 3,
+                "GC": 5,
+                "SG": -2
+            }
+        ],
+        "Grupo D": [
+            {
+                "Nome": "Jujutsu Kaisen",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 6,
+                "GC": 1,
+                "SG": 5
+            },
+            {
+                "Nome": "Looney Tunes",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 3,
+                "GC": 1,
+                "SG": 2
+            },
+            {
+                "Nome": "Mario",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 3,
+                "GC": 4,
+                "SG": -1
+            },
+            {
+                "Nome": "Madagascar",
+                "Pts": 1,
+                "J": 3,
+                "V": 0,
+                "E": 1,
+                "D": 2,
+                "GP": 0,
+                "GC": 6,
+                "SG": -6
+            }
+        ],
+        "Grupo E": [
+            {
+                "Nome": "Consoles",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 6,
+                "GC": 4,
+                "SG": 2
+            },
+            {
+                "Nome": "Padrinhos Mágicos",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 2,
+                "GC": 0,
+                "SG": 2
+            },
+            {
+                "Nome": "Red Dead Redemption",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 4,
+                "GC": 4,
+                "SG": 0
+            },
+            {
+                "Nome": "Círculo de Fogo",
+                "Pts": 0,
+                "J": 3,
+                "V": 0,
+                "E": 0,
+                "D": 3,
+                "GP": 2,
+                "GC": 6,
+                "SG": -4
+            }
+        ],
+        "Grupo F": [
+            {
+                "Nome": "God of War",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 7,
+                "GC": 4,
+                "SG": 3
+            },
+            {
+                "Nome": "Shrek 4",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 3,
+                "GC": 2,
+                "SG": 1
+            },
+            {
+                "Nome": "Naruto",
+                "Pts": 4,
+                "J": 3,
+                "V": 1,
+                "E": 1,
+                "D": 1,
+                "GP": 4,
+                "GC": 4,
+                "SG": 0
+            },
+            {
+                "Nome": "Rei Leão",
+                "Pts": 1,
+                "J": 3,
+                "V": 0,
+                "E": 1,
+                "D": 2,
+                "GP": 1,
+                "GC": 5,
+                "SG": -4
+            }
+        ],
+        "Grupo G": [
+            {
+                "Nome": "Carros",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 5,
+                "GC": 2,
+                "SG": 3
+            },
+            {
+                "Nome": "Transformers",
+                "Pts": 7,
+                "J": 3,
+                "V": 2,
+                "E": 1,
+                "D": 0,
+                "GP": 4,
+                "GC": 2,
+                "SG": 2
+            },
+            {
+                "Nome": "Dead by Daylight",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 3,
+                "GC": 4,
+                "SG": -1
+            },
+            {
+                "Nome": "Bleach",
+                "Pts": 0,
+                "J": 3,
+                "V": 0,
+                "E": 0,
+                "D": 3,
+                "GP": 4,
+                "GC": 8,
+                "SG": -4
+            }
+        ],
+        "Grupo H": [
+            {
+                "Nome": "Dragon Ball",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 5,
+                "GC": 2,
+                "SG": 3
+            },
+            {
+                "Nome": "Toronto FC",
+                "Pts": 6,
+                "J": 3,
+                "V": 2,
+                "E": 0,
+                "D": 1,
+                "GP": 5,
+                "GC": 6,
+                "SG": -1
+            },
+            {
+                "Nome": "La Casa de Papel",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 5,
+                "GC": 6,
+                "SG": -1
+            },
+            {
+                "Nome": "Blue Lock",
+                "Pts": 3,
+                "J": 3,
+                "V": 1,
+                "E": 0,
+                "D": 2,
+                "GP": 5,
+                "GC": 6,
+                "SG": -1
+            }
+        ]
+    },
+    "calendario": [],
+    "confrontos_atuais": [
+        [
+            "Carros",
+            "Looney Tunes"
+        ],
+        [
+            "Kung Fu Panda",
+            "Transformers"
+        ],
+        [
+            "Jujutsu Kaisen",
+            "Velozes e Furiosos"
+        ],
+        [
+            "Consoles",
+            "Padrinhos Mágicos"
+        ],
+        [
+            "Sonic",
+            "GTA"
+        ]
+    ],
+    "estatisticas_globais": {
+        "Altaïr": {
+            "time": "Assassins Creed",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 34.5,
+            "jogos": 4,
+            "defesas": 20,
+            "clean_sheets": 1
+        },
+        "Evie Frye": {
+            "time": "Assassins Creed",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 28.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bayek de Siwa": {
+            "time": "Assassins Creed",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Eivor": {
+            "time": "Assassins Creed",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.6,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Arno Dorian": {
+            "time": "Assassins Creed",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.500000000000004,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Haytham Kenway": {
+            "time": "Assassins Creed",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 28.1,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kassandra": {
+            "time": "Assassins Creed",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Edward Kenway": {
+            "time": "Assassins Creed",
+            "posicao": "MEI",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 30.5,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Basim": {
+            "time": "Assassins Creed",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 28.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ezio Auditore": {
+            "time": "Assassins Creed",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Connor Kenway": {
+            "time": "Assassins Creed",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 30.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Aveline": {
+            "time": "Assassins Creed",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 27.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Alexios": {
+            "time": "Assassins Creed",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shay Cormac": {
+            "time": "Assassins Creed",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.2,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jacob Frye": {
+            "time": "Assassins Creed",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Adele": {
+            "time": "Ícones do Pop",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 23.599999999999998,
+            "jogos": 3,
+            "defesas": 12,
+            "clean_sheets": 0
+        },
+        "Taylor Swift": {
+            "time": "Ícones do Pop",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 21.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Freddie Mercury": {
+            "time": "Ícones do Pop",
+            "posicao": "ZAG",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Elton John": {
+            "time": "Ícones do Pop",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Justin Bieber": {
+            "time": "Ícones do Pop",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Prince": {
+            "time": "Ícones do Pop",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lady Gaga": {
+            "time": "Ícones do Pop",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bruno Mars": {
+            "time": "Ícones do Pop",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Beyoncé": {
+            "time": "Ícones do Pop",
+            "posicao": "PE",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Madonna": {
+            "time": "Ícones do Pop",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 23.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Michael Jackson": {
+            "time": "Ícones do Pop",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "The Weeknd": {
+            "time": "Ícones do Pop",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Franky": {
+            "time": "One Piece",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 32.400000000000006,
+            "jogos": 4,
+            "defesas": 9,
+            "clean_sheets": 2
+        },
+        "Brook": {
+            "time": "One Piece",
+            "posicao": "LE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 29.299999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jinbe": {
+            "time": "One Piece",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 29.5,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Roronoa Zoro": {
+            "time": "One Piece",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 29.799999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Usopp": {
+            "time": "One Piece",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nico Robin": {
+            "time": "One Piece",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 28.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nami": {
+            "time": "One Piece",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 28.4,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tony Chopper": {
+            "time": "One Piece",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.8,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vinsmoke Sanji": {
+            "time": "One Piece",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 28.799999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Yamato": {
+            "time": "One Piece",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 29.8,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Luffy": {
+            "time": "One Piece",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 31.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Boa Hancock": {
+            "time": "One Piece",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Crocodile": {
+            "time": "One Piece",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Buggy": {
+            "time": "One Piece",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Trafalgar Law": {
+            "time": "One Piece",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kim Jong Un": {
+            "time": "Política da Zoeira",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 24.5,
+            "jogos": 3,
+            "defesas": 13,
+            "clean_sheets": 0
+        },
+        "Nicolas Maduro": {
+            "time": "Política da Zoeira",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Josef Stalin": {
+            "time": "Política da Zoeira",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Valdimir Putin": {
+            "time": "Política da Zoeira",
+            "posicao": "ZAG",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 24.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mussolini": {
+            "time": "Política da Zoeira",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 23.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Adolf Hitler": {
+            "time": "Política da Zoeira",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "LULA": {
+            "time": "Política da Zoeira",
+            "posicao": "MC",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 23.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jair Bolsonaro": {
+            "time": "Política da Zoeira",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sadam Hussein": {
+            "time": "Política da Zoeira",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Donald Trump": {
+            "time": "Política da Zoeira",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Osama Bin Laden": {
+            "time": "Política da Zoeira",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Che Guevara": {
+            "time": "Política da Zoeira",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Fidel Castro": {
+            "time": "Política da Zoeira",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Winston Churchill": {
+            "time": "Política da Zoeira",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Abraham Lincoln": {
+            "time": "Política da Zoeira",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Luke Hobbs": {
+            "time": "Velozes e Furiosos",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.3,
+            "jogos": 3,
+            "defesas": 29,
+            "clean_sheets": 1
+        },
+        "Letty Ortiz": {
+            "time": "Velozes e Furiosos",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Dante Reyes": {
+            "time": "Velozes e Furiosos",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jakob Toretto": {
+            "time": "Velozes e Furiosos",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Han Lue": {
+            "time": "Velozes e Furiosos",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Roman Pearce": {
+            "time": "Velozes e Furiosos",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Deckard Shaw": {
+            "time": "Velozes e Furiosos",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Brian O'Conner": {
+            "time": "Velozes e Furiosos",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gisele Yashar": {
+            "time": "Velozes e Furiosos",
+            "posicao": "PE",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mia Toretto": {
+            "time": "Velozes e Furiosos",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Dominic Toretto": {
+            "time": "Velozes e Furiosos",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sean Boswell": {
+            "time": "Velozes e Furiosos",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vince": {
+            "time": "Velozes e Furiosos",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ramsey": {
+            "time": "Velozes e Furiosos",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "The Notorious B.I.G.": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.8,
+            "jogos": 3,
+            "defesas": 15,
+            "clean_sheets": 1
+        },
+        "Snoop Dogg": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "50 Cent": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "DMX": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kendrick Lamar": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ice Cube": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lauryn Hill": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jay-Z": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.900000000000002,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Eminem": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kanye West": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tupac": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 24.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Drake": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.5,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Po": {
+            "time": "Kung Fu Panda",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.8,
+            "jogos": 3,
+            "defesas": 22,
+            "clean_sheets": 2
+        },
+        "Garça": {
+            "time": "Kung Fu Panda",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mestre Boi Toró": {
+            "time": "Kung Fu Panda",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mestre Crocodilo": {
+            "time": "Kung Fu Panda",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Louva-a-Deus": {
+            "time": "Kung Fu Panda",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Víbora": {
+            "time": "Kung Fu Panda",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Macaco": {
+            "time": "Kung Fu Panda",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 23.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tai Lung": {
+            "time": "Kung Fu Panda",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lord Shen": {
+            "time": "Kung Fu Panda",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tigresa": {
+            "time": "Kung Fu Panda",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kai": {
+            "time": "Kung Fu Panda",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 23.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Comandante Vachir": {
+            "time": "Kung Fu Panda",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 14.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sr. Ping": {
+            "time": "Kung Fu Panda",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.3,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bafo de Onça": {
+            "time": "Disney",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.700000000000003,
+            "jogos": 3,
+            "defesas": 25,
+            "clean_sheets": 1
+        },
+        "Margarida": {
+            "time": "Disney",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pateta": {
+            "time": "Disney",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Clarabela": {
+            "time": "Disney",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pluto": {
+            "time": "Disney",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pato Donald": {
+            "time": "Disney",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Minnie Mouse": {
+            "time": "Disney",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Zé Carioca": {
+            "time": "Disney",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Max Goof": {
+            "time": "Disney",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Horácio": {
+            "time": "Disney",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mickey Mouse": {
+            "time": "Disney",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Huell Babineaux": {
+            "time": "Breaking Bad",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 8,
+            "clean_sheets": 0
+        },
+        "Skyler White": {
+            "time": "Breaking Bad",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Leonel": {
+            "time": "Breaking Bad",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Marco": {
+            "time": "Breaking Bad",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.599999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hank Schrader": {
+            "time": "Breaking Bad",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Saul Goodman": {
+            "time": "Breaking Bad",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tuco Salamanca": {
+            "time": "Breaking Bad",
+            "posicao": "MC",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jesse Pinkman": {
+            "time": "Breaking Bad",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lalo Salamanca": {
+            "time": "Breaking Bad",
+            "posicao": "MD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Todd Alquist": {
+            "time": "Breaking Bad",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Walter White": {
+            "time": "Breaking Bad",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 23.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Badger": {
+            "time": "Breaking Bad",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 13.600000000000001,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hector Salamanca": {
+            "time": "Breaking Bad",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.8,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gus Fring": {
+            "time": "Breaking Bad",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Skinny Pete": {
+            "time": "Breaking Bad",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Big the Cat": {
+            "time": "Sonic",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 24.9,
+            "jogos": 3,
+            "defesas": 14,
+            "clean_sheets": 2
+        },
+        "Amy Rose": {
+            "time": "Sonic",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "E-123 Omega": {
+            "time": "Sonic",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vector": {
+            "time": "Sonic",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Espio": {
+            "time": "Sonic",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Knuckles": {
+            "time": "Sonic",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 23.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tails": {
+            "time": "Sonic",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Silver": {
+            "time": "Sonic",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 23.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Blaze": {
+            "time": "Sonic",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shadow": {
+            "time": "Sonic",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sonic": {
+            "time": "Sonic",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Chao": {
+            "time": "Sonic",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 20.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Metal Sonic": {
+            "time": "Sonic",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rouge": {
+            "time": "Sonic",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cream": {
+            "time": "Sonic",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Big Smoke": {
+            "time": "GTA",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 24.2,
+            "jogos": 3,
+            "defesas": 12,
+            "clean_sheets": 0
+        },
+        "Lamar Davis": {
+            "time": "GTA",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Trevor Philips": {
+            "time": "GTA",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Niko Bellic": {
+            "time": "GTA",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Roman Bellic": {
+            "time": "GTA",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Claude": {
+            "time": "GTA",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Michael De Santa": {
+            "time": "GTA",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tommy Vercetti": {
+            "time": "GTA",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Franklin Clinton": {
+            "time": "GTA",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ryder": {
+            "time": "GTA",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Carl Johnson": {
+            "time": "GTA",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 23.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Catalina": {
+            "time": "GTA",
+            "posicao": "LAT",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 14.2,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Woozie": {
+            "time": "GTA",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 14.6,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lance Vance": {
+            "time": "GTA",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ken Rosenberg": {
+            "time": "GTA",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.4,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Translucent": {
+            "time": "The Boys",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.9,
+            "jogos": 3,
+            "defesas": 26,
+            "clean_sheets": 0
+        },
+        "Profundo": {
+            "time": "The Boys",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Soldier Boy": {
+            "time": "The Boys",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Black Noir": {
+            "time": "The Boys",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Trem-Bala": {
+            "time": "The Boys",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Leitinho (MM)": {
+            "time": "The Boys",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Frenchie": {
+            "time": "The Boys",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hughie Campbell": {
+            "time": "The Boys",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Luz-Estrela": {
+            "time": "The Boys",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Billy Bruto": {
+            "time": "The Boys",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Capitão Pátria": {
+            "time": "The Boys",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tempesta": {
+            "time": "The Boys",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 16.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Victoria Neuman": {
+            "time": "The Boys",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.6,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kimiko": {
+            "time": "The Boys",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.100000000000001,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Stan Edgar": {
+            "time": "The Boys",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Suguru Geto": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.1,
+            "jogos": 3,
+            "defesas": 21,
+            "clean_sheets": 2
+        },
+        "Maki Zenin": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Aoi Todo": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 23.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kento Nanami": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Megumi": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Yuta Okkotsu": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Toge Inumaki": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 2,
+            "notas_soma": 23.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Yuji Itadori": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "PE",
+            "gols": 2,
+            "assistencias": 1,
+            "notas_soma": 25.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Toji Fushiguro": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "PD",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Satoru Gojo": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 2,
+            "notas_soma": 25.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ryomen Sukuna": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mahito": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Panda": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ino": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Choso": {
+            "time": "Jujutsu Kaisen",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gossamer": {
+            "time": "Looney Tunes",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.9,
+            "jogos": 3,
+            "defesas": 21,
+            "clean_sheets": 2
+        },
+        "Papa-Léguas": {
+            "time": "Looney Tunes",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Frangolino": {
+            "time": "Looney Tunes",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gaguinho": {
+            "time": "Looney Tunes",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ligeirinho": {
+            "time": "Looney Tunes",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Diabo da Tasmânia": {
+            "time": "Looney Tunes",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Patolino": {
+            "time": "Looney Tunes",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Frajola": {
+            "time": "Looney Tunes",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Piu-Piu": {
+            "time": "Looney Tunes",
+            "posicao": "PE",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Coiote": {
+            "time": "Looney Tunes",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pernalonga": {
+            "time": "Looney Tunes",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hortelino": {
+            "time": "Looney Tunes",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Marvin Marciano": {
+            "time": "Looney Tunes",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bowser": {
+            "time": "Mario",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.1,
+            "jogos": 3,
+            "defesas": 18,
+            "clean_sheets": 1
+        },
+        "Yoshi": {
+            "time": "Mario",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Donkey Kong": {
+            "time": "Mario",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Wario": {
+            "time": "Mario",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Waluigi": {
+            "time": "Mario",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bowser Jr.": {
+            "time": "Mario",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Luigi": {
+            "time": "Mario",
+            "posicao": "MC",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 43.300000000000004,
+            "jogos": 6,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Princesa Peach": {
+            "time": "Mario",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Princesa Daisy": {
+            "time": "Mario",
+            "posicao": "MD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Toad": {
+            "time": "Mario",
+            "posicao": "SA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mario": {
+            "time": "Mario",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 2,
+            "notas_soma": 24.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "King Boo": {
+            "time": "Mario",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gloria": {
+            "time": "Madagascar",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.8,
+            "jogos": 3,
+            "defesas": 25,
+            "clean_sheets": 1
+        },
+        "Capitao": {
+            "time": "Madagascar",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kowalski": {
+            "time": "Madagascar",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rico": {
+            "time": "Madagascar",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Recruta": {
+            "time": "Madagascar",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Melman": {
+            "time": "Madagascar",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mason": {
+            "time": "Madagascar",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Marty": {
+            "time": "Madagascar",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vitaly": {
+            "time": "Madagascar",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gia": {
+            "time": "Madagascar",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Alex": {
+            "time": "Madagascar",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mort": {
+            "time": "Madagascar",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.3,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rei Julien": {
+            "time": "Madagascar",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.1,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Zuba": {
+            "time": "Madagascar",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.2,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Caçadora": {
+            "time": "Madagascar",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Denzel Crocker": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.9,
+            "jogos": 3,
+            "defesas": 22,
+            "clean_sheets": 3
+        },
+        "Chester": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Queixo Rubro": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 23.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mark Chang": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "AJ": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 23.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cosmo": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Wanda": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Trixie Tang": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vicky": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Timmy Turner": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Crash Nebula": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sr. Turner": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cherno Alpha": {
+            "time": "Círculo de Fogo",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.299999999999997,
+            "jogos": 3,
+            "defesas": 15,
+            "clean_sheets": 0
+        },
+        "Tacit Ronin": {
+            "time": "Círculo de Fogo",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Slattern": {
+            "time": "Círculo de Fogo",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Leatherback": {
+            "time": "Círculo de Fogo",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Striker Eureka": {
+            "time": "Círculo de Fogo",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Crimson Typhoon": {
+            "time": "Círculo de Fogo",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mutavore": {
+            "time": "Círculo de Fogo",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 18.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Otachi": {
+            "time": "Círculo de Fogo",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Romeo Blue": {
+            "time": "Círculo de Fogo",
+            "posicao": "MD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Knifehead": {
+            "time": "Círculo de Fogo",
+            "posicao": "SA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gipsy Danger": {
+            "time": "Círculo de Fogo",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gipsy Avenger": {
+            "time": "Círculo de Fogo",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.399999999999999,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Brawler Yukon": {
+            "time": "Círculo de Fogo",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Saber Athena": {
+            "time": "Círculo de Fogo",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Obsidian Fury": {
+            "time": "Círculo de Fogo",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Steam": {
+            "time": "Consoles",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.099999999999998,
+            "jogos": 3,
+            "defesas": 20,
+            "clean_sheets": 1
+        },
+        "Nintendo Switch": {
+            "time": "Consoles",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "PlayStation 2": {
+            "time": "Consoles",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Xbox 360": {
+            "time": "Consoles",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Super Nintendo": {
+            "time": "Consoles",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "PlayStation 1": {
+            "time": "Consoles",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nintendo 64": {
+            "time": "Consoles",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Xbox Series X": {
+            "time": "Consoles",
+            "posicao": "ME",
+            "gols": 3,
+            "assistencias": 0,
+            "notas_soma": 24.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "PlayStation 5": {
+            "time": "Consoles",
+            "posicao": "MD",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Atari 2600": {
+            "time": "Consoles",
+            "posicao": "SA",
+            "gols": 0,
+            "assistencias": 3,
+            "notas_soma": 24.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nintendo Wii": {
+            "time": "Consoles",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 22.599999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Charles Smith": {
+            "time": "Red Dead Redemption",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.4,
+            "jogos": 3,
+            "defesas": 6,
+            "clean_sheets": 1
+        },
+        "Sadie Adler": {
+            "time": "Red Dead Redemption",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sean Mcguaire": {
+            "time": "Red Dead Redemption",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Águia Voando": {
+            "time": "Red Dead Redemption",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Javier Escuella": {
+            "time": "Red Dead Redemption",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bill Williamson": {
+            "time": "Red Dead Redemption",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lenny Summers": {
+            "time": "Red Dead Redemption",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Arthur Morgan": {
+            "time": "Red Dead Redemption",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Micah Bell": {
+            "time": "Red Dead Redemption",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Dutch van der Linde": {
+            "time": "Red Dead Redemption",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "John Marston": {
+            "time": "Red Dead Redemption",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mary Beth": {
+            "time": "Red Dead Redemption",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kieran Duffy": {
+            "time": "Red Dead Redemption",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.5,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Abigail Roberts": {
+            "time": "Red Dead Redemption",
+            "posicao": "MEI",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Josiah Trelawny": {
+            "time": "Red Dead Redemption",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.7,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gaara": {
+            "time": "Naruto",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.5,
+            "jogos": 3,
+            "defesas": 16,
+            "clean_sheets": 1
+        },
+        "Rock Lee": {
+            "time": "Naruto",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hashirama": {
+            "time": "Naruto",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Madara": {
+            "time": "Naruto",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Minato": {
+            "time": "Naruto",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Neji": {
+            "time": "Naruto",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shikamaru": {
+            "time": "Naruto",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sasuke": {
+            "time": "Naruto",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Might Guy": {
+            "time": "Naruto",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Itachi": {
+            "time": "Naruto",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 3,
+            "notas_soma": 24.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Naruto": {
+            "time": "Naruto",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 24.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jiraiya": {
+            "time": "Naruto",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Orochimaru": {
+            "time": "Naruto",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cronos": {
+            "time": "God of War",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 37.2,
+            "jogos": 4,
+            "defesas": 33,
+            "clean_sheets": 1
+        },
+        "Freya": {
+            "time": "God of War",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.5,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Thor": {
+            "time": "God of War",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.7,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ares": {
+            "time": "God of War",
+            "posicao": "ZAG",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 29.5,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Heimdall": {
+            "time": "God of War",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 29.299999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tyr": {
+            "time": "God of War",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 29.200000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hércules": {
+            "time": "God of War",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.3,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sindri": {
+            "time": "God of War",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.1,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Brok": {
+            "time": "God of War",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 3,
+            "notas_soma": 28.6,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Atreus": {
+            "time": "God of War",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 28.2,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kratos": {
+            "time": "God of War",
+            "posicao": "ATA",
+            "gols": 4,
+            "assistencias": 0,
+            "notas_soma": 34.2,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mimir": {
+            "time": "God of War",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Modi": {
+            "time": "God of War",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.2,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pumba": {
+            "time": "Rei Leão",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.700000000000003,
+            "jogos": 3,
+            "defesas": 15,
+            "clean_sheets": 1
+        },
+        "Nala": {
+            "time": "Rei Leão",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sarabi": {
+            "time": "Rei Leão",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Banzai": {
+            "time": "Rei Leão",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shenzi": {
+            "time": "Rei Leão",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rafiki": {
+            "time": "Rei Leão",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ed": {
+            "time": "Rei Leão",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Timão": {
+            "time": "Rei Leão",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Scar": {
+            "time": "Rei Leão",
+            "posicao": "MD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mufasa": {
+            "time": "Rei Leão",
+            "posicao": "SA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Simba": {
+            "time": "Rei Leão",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Dragão": {
+            "time": "Shrek 4",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 37.8,
+            "jogos": 4,
+            "defesas": 29,
+            "clean_sheets": 3
+        },
+        "Bruxa": {
+            "time": "Shrek 4",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 29.8,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Brogan": {
+            "time": "Shrek 4",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 29.200000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gretched": {
+            "time": "Shrek 4",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cookie": {
+            "time": "Shrek 4",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 29.5,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Biscoito": {
+            "time": "Shrek 4",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pinóquio": {
+            "time": "Shrek 4",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 29.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Burro": {
+            "time": "Shrek 4",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.2,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gato de Botas": {
+            "time": "Shrek 4",
+            "posicao": "MD",
+            "gols": 2,
+            "assistencias": 3,
+            "notas_soma": 34.6,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Fiona": {
+            "time": "Shrek 4",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 31.799999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shrek": {
+            "time": "Shrek 4",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 1,
+            "notas_soma": 31.8,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Fada Madrinha": {
+            "time": "Shrek 4",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.1,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rainha Lillian": {
+            "time": "Shrek 4",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.599999999999998,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rei Harold": {
+            "time": "Shrek 4",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Príncipe Encantado": {
+            "time": "Shrek 4",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.1,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mack": {
+            "time": "Carros",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.799999999999997,
+            "jogos": 3,
+            "defesas": 16,
+            "clean_sheets": 2
+        },
+        "Cruz Ramirez": {
+            "time": "Carros",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.900000000000002,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mate": {
+            "time": "Carros",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sargento": {
+            "time": "Carros",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sally": {
+            "time": "Carros",
+            "posicao": "LD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Guido": {
+            "time": "Carros",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Finn McMissile": {
+            "time": "Carros",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 22.900000000000002,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jackson Storm": {
+            "time": "Carros",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Francesco Bernoulli": {
+            "time": "Carros",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Relâmpago McQueen": {
+            "time": "Carros",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Doc Hudson": {
+            "time": "Carros",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 15.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Chick Hicks": {
+            "time": "Carros",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 14.899999999999999,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Komamura": {
+            "time": "Bleach",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.400000000000002,
+            "jogos": 3,
+            "defesas": 25,
+            "clean_sheets": 0
+        },
+        "Yoruichi": {
+            "time": "Bleach",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kenpachi": {
+            "time": "Bleach",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Byakuya": {
+            "time": "Bleach",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Soi Fon": {
+            "time": "Bleach",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Urahara": {
+            "time": "Bleach",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hitsugaya": {
+            "time": "Bleach",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Aizen": {
+            "time": "Bleach",
+            "posicao": "MC",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Renji Abarai": {
+            "time": "Bleach",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Grimmjow": {
+            "time": "Bleach",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 2,
+            "notas_soma": 22.7,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ichigo": {
+            "time": "Bleach",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Uryu": {
+            "time": "Bleach",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.6,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ulquiorra": {
+            "time": "Bleach",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jushiro": {
+            "time": "Bleach",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.299999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shunsui": {
+            "time": "Bleach",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nemesis": {
+            "time": "Dead by Daylight",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.1,
+            "jogos": 3,
+            "defesas": 18,
+            "clean_sheets": 0
+        },
+        "Ghostface": {
+            "time": "Dead by Daylight",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jason Voorhees": {
+            "time": "Dead by Daylight",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pyramid Head": {
+            "time": "Dead by Daylight",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Chucky": {
+            "time": "Dead by Daylight",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 20.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pinhead": {
+            "time": "Dead by Daylight",
+            "posicao": "VOL",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jigsaw": {
+            "time": "Dead by Daylight",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Freddy Krueger": {
+            "time": "Dead by Daylight",
+            "posicao": "ME",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Leatherface": {
+            "time": "Dead by Daylight",
+            "posicao": "MD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Michael Myers": {
+            "time": "Dead by Daylight",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Albert Wesker": {
+            "time": "Dead by Daylight",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Doctor": {
+            "time": "Dead by Daylight",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.9,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sino": {
+            "time": "Dead by Daylight",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.4,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nurse": {
+            "time": "Dead by Daylight",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Huntress": {
+            "time": "Dead by Daylight",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Grimlock": {
+            "time": "Transformers",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.1,
+            "jogos": 3,
+            "defesas": 10,
+            "clean_sheets": 1
+        },
+        "Arcee": {
+            "time": "Transformers",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 22.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Megatron": {
+            "time": "Transformers",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ironhide": {
+            "time": "Transformers",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hound": {
+            "time": "Transformers",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Soundwave": {
+            "time": "Transformers",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 22.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shockwave": {
+            "time": "Transformers",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Starscream": {
+            "time": "Transformers",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.799999999999997,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bumblebee": {
+            "time": "Transformers",
+            "posicao": "PD",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 23.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Optimus Prime": {
+            "time": "Transformers",
+            "posicao": "MEI",
+            "gols": 3,
+            "assistencias": 0,
+            "notas_soma": 26.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jazz": {
+            "time": "Transformers",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sideswipe": {
+            "time": "Transformers",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lockdown": {
+            "time": "Transformers",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Crosshairs": {
+            "time": "Transformers",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jv": {
+            "time": "Toronto FC",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 35.7,
+            "jogos": 4,
+            "defesas": 24,
+            "clean_sheets": 1
+        },
+        "Léo": {
+            "time": "Toronto FC",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Raphao": {
+            "time": "Toronto FC",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.599999999999998,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ian": {
+            "time": "Toronto FC",
+            "posicao": "ZAG",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 28.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Davis Jr": {
+            "time": "Toronto FC",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Joao Lima": {
+            "time": "Toronto FC",
+            "posicao": "LD",
+            "gols": 1,
+            "assistencias": 1,
+            "notas_soma": 29.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pedro Bogaz": {
+            "time": "Toronto FC",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 27.700000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Enrico Dutra": {
+            "time": "Toronto FC",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Henri Dutra": {
+            "time": "Toronto FC",
+            "posicao": "PD",
+            "gols": 2,
+            "assistencias": 2,
+            "notas_soma": 30.900000000000002,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Pedro Lima": {
+            "time": "Toronto FC",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 3,
+            "notas_soma": 31.299999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Enzo": {
+            "time": "Toronto FC",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 29.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Igor Blacknitz": {
+            "time": "Toronto FC",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gin Gagamaru": {
+            "time": "Blue Lock",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 6,
+            "clean_sheets": 1
+        },
+        "Hyoma Chigiri": {
+            "time": "Blue Lock",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.2,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Oliver Aiku": {
+            "time": "Blue Lock",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 21.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jyubei Aryu": {
+            "time": "Blue Lock",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Reo Mikage": {
+            "time": "Blue Lock",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tabito Karasu": {
+            "time": "Blue Lock",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.200000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Meguru Bachira": {
+            "time": "Blue Lock",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 21.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sae Itoshi": {
+            "time": "Blue Lock",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Seishiro Nagi": {
+            "time": "Blue Lock",
+            "posicao": "PE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.700000000000003,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rin Itoshi": {
+            "time": "Blue Lock",
+            "posicao": "PD",
+            "gols": 1,
+            "assistencias": 3,
+            "notas_soma": 24.800000000000004,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Yoichi Isagi": {
+            "time": "Blue Lock",
+            "posicao": "ATA",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.099999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Niko": {
+            "time": "Blue Lock",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.5,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tokimitsu": {
+            "time": "Blue Lock",
+            "posicao": "LAT",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 20.1,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Zantetsu": {
+            "time": "Blue Lock",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Helsinki": {
+            "time": "La Casa de Papel",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.2,
+            "jogos": 3,
+            "defesas": 15,
+            "clean_sheets": 0
+        },
+        "Estocolmo": {
+            "time": "La Casa de Papel",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.4,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Palermo": {
+            "time": "La Casa de Papel",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bogotá": {
+            "time": "La Casa de Papel",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.0,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rio": {
+            "time": "La Casa de Papel",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 18.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Moscou": {
+            "time": "La Casa de Papel",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.599999999999998,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Denver": {
+            "time": "La Casa de Papel",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 2,
+            "notas_soma": 21.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nairobi": {
+            "time": "La Casa de Papel",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 2,
+            "notas_soma": 24.400000000000002,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tóquio": {
+            "time": "La Casa de Papel",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Manila": {
+            "time": "La Casa de Papel",
+            "posicao": "PD",
+            "gols": 2,
+            "assistencias": 0,
+            "notas_soma": 23.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Berlim": {
+            "time": "La Casa de Papel",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 21.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Arturo": {
+            "time": "La Casa de Papel",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.600000000000001,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lisboa": {
+            "time": "La Casa de Papel",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.9,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gandía": {
+            "time": "La Casa de Papel",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.600000000000001,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Piccolo": {
+            "time": "Dragon Ball",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 34.3,
+            "jogos": 4,
+            "defesas": 21,
+            "clean_sheets": 1
+        },
+        "Trunks": {
+            "time": "Dragon Ball",
+            "posicao": "LE",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.6,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jiren": {
+            "time": "Dragon Ball",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.3,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Broly": {
+            "time": "Dragon Ball",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.1,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Vegeta": {
+            "time": "Dragon Ball",
+            "posicao": "LD",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 28.9,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Androide 17": {
+            "time": "Dragon Ball",
+            "posicao": "VOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 28.599999999999998,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gohan": {
+            "time": "Dragon Ball",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 25.099999999999998,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kuririn": {
+            "time": "Dragon Ball",
+            "posicao": "MC",
+            "gols": 0,
+            "assistencias": 3,
+            "notas_soma": 29.2,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Freeza": {
+            "time": "Dragon Ball",
+            "posicao": "PE",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 29.200000000000003,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cell": {
+            "time": "Dragon Ball",
+            "posicao": "PD",
+            "gols": 3,
+            "assistencias": 1,
+            "notas_soma": 31.0,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Goku": {
+            "time": "Dragon Ball",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 30.4,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Yamcha": {
+            "time": "Dragon Ball",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 17.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tenshinhan": {
+            "time": "Dragon Ball",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 20.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gotenks": {
+            "time": "Dragon Ball",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 26.799999999999997,
+            "jogos": 4,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rihanna": {
+            "time": "Ícones do Pop",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.600000000000001,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Ariana Grande": {
+            "time": "Ícones do Pop",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.5,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Katy Perry": {
+            "time": "Ícones do Pop",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.9,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Cipher": {
+            "time": "Velozes e Furiosos",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Zezinho": {
+            "time": "Disney",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Luisinho": {
+            "time": "Disney",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.4,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Huguinho": {
+            "time": "Disney",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.9,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Gastão": {
+            "time": "Disney",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 15.4,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Nas": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.2,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Travis Scott": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.5,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "J. Cole": {
+            "time": "Ícones do Hip-Hop",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.9,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mestre Urso": {
+            "time": "Kung Fu Panda",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Lola Bunny": {
+            "time": "Looney Tunes",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 8.1,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "O Mago - Patolino": {
+            "time": "Looney Tunes",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.5,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Diddy Kong": {
+            "time": "Mario",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.899999999999999,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Kamek": {
+            "time": "Mario",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.3,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Fada do Dente": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.2,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Game Boy": {
+            "time": "Consoles",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.6,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "PS4": {
+            "time": "Consoles",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.8,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Xbox One": {
+            "time": "Consoles",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.0,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Sega Genesis": {
+            "time": "Consoles",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.8,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Hinata": {
+            "time": "Naruto",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 12.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Tsunade": {
+            "time": "Naruto",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.2,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Athena": {
+            "time": "God of War",
+            "posicao": "ATA",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.3,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Magni": {
+            "time": "God of War",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Jasiri": {
+            "time": "Rei Leão",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Xerife": {
+            "time": "Carros",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.4,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "O Rei Dinoco": {
+            "time": "Carros",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.0,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Drift": {
+            "time": "Transformers",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 13.1,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Igor Barca": {
+            "time": "Toronto FC",
+            "posicao": "MEI",
+            "gols": 1,
+            "assistencias": 0,
+            "notas_soma": 22.6,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Matheus": {
+            "time": "Toronto FC",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 14.7,
+            "jogos": 2,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Bene": {
+            "time": "Toronto FC",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.8,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Majin Boo": {
+            "time": "Dragon Ball",
+            "posicao": "MEI",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 19.8,
+            "jogos": 3,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Shidou": {
+            "time": "Blue Lock",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 8.8,
+            "jogos": 1,
+            "defesas": 4,
+            "clean_sheets": 0
+        },
+        "Hiori": {
+            "time": "Blue Lock",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.2,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Mestre Shifu": {
+            "time": "Kung Fu Panda",
+            "posicao": "ATA",
+            "gols": 0,
+            "assistencias": 1,
+            "notas_soma": 8.4,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Rosalina": {
+            "time": "Mario",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.2,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Binky": {
+            "time": "Padrinhos Mágicos",
+            "posicao": "LAT",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.5,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Coyote Tango": {
+            "time": "Círculo de Fogo",
+            "posicao": "GOL",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 8.0,
+            "jogos": 1,
+            "defesas": 5,
+            "clean_sheets": 0
+        },
+        "Jambo": {
+            "time": "Rei Leão",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 6.7,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        },
+        "Marselha": {
+            "time": "La Casa de Papel",
+            "posicao": "ZAG",
+            "gols": 0,
+            "assistencias": 0,
+            "notas_soma": 7.1,
+            "jogos": 1,
+            "defesas": 0,
+            "clean_sheets": 0
+        }
+    },
+    "is_final_round": false,
+    "vencedores_fase": [
+        "Shrek 4",
+        "Toronto FC",
+        "One Piece"
+    ],
+    "perdedores_fase": [
+        "Dragon Ball",
+        "Assassins Creed",
+        "God of War"
+    ]
+}
