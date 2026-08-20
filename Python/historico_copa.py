@@ -18,4 +18,12 @@ hall_da_fama = {'Edicao_1': {'Artilheiro': 'Sae Itoshi (6 Gols)',
               'Quarto': 'Bleach',
               'Terceiro': 'The Boys',
               'Vice': 'Ícones do Pop'},
- 'Titulos_Totais': {"Assassin's Creed": 1, 'Breaking Bad': 1}}
+ 'Edicao_3': {'Artilheiro': 'Fiona (8 Gols)',
+              'Assistente': 'Biscoito (4 Assist.)',
+              'Campeao': 'Shrek 4',
+              'Melhor_Goleiro': 'Dragão (4 CS)',
+              'Melhor_Jogador': 'Po (Média 9.62)',
+              'Quarto': 'One Piece',
+              'Terceiro': 'Carros',
+              'Vice': 'Bleach'},
+ 'Titulos_Totais': {"Assassin's Creed": 1, 'Breaking Bad': 1, 'Shrek 4': 1}}
